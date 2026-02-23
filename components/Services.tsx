@@ -29,7 +29,6 @@ const services = [
       "Data Lakes e Warehouses",
       "Pipelines ETL/ELT robustos",
       "Modelagem para Analytics",
-      "Qualidade de Dados"
     ]
   },
   {
@@ -63,12 +62,22 @@ export default function Services() {
   const [activeStep, setActiveStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   
+  // Resume auto-play after interaction
+  useEffect(() => {
+    if (!isPaused) return;
+    const timeout = setTimeout(() => {
+      setIsPaused(false);
+    }, 10000); // Resume after 10s of inactivity
+
+    return () => clearTimeout(timeout);
+  }, [isPaused]);
+
   // Auto-play logic
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % services.length);
-    }, 5000); 
+    }, 4000); 
 
     return () => clearInterval(interval);
   }, [isPaused]);
@@ -170,7 +179,7 @@ export default function Services() {
                   </div>
 
                   {/* Active Card Details - DESKTOP ONLY */}
-                  <div className="absolute top-[140px] w-full min-w-[280px] left-1/2 -translate-x-1/2 hidden lg:block z-30">
+                  <div className="absolute top-[200px] w-full min-w-[280px] left-1/2 -translate-x-1/2 hidden lg:block z-30">
                      <AnimatePresence mode="wait">
                        {isActive && (
                          <motion.div

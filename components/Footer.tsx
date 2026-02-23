@@ -21,7 +21,7 @@ export default function Footer({ onContactClick }: FooterProps) {
               onClick={onContactClick}
               className="mt-8 md:mt-0 inline-flex whitespace-nowrap items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all"
              >
-               Fale Conosco
+               Estou pronto
                <ArrowUpRight />
              </button>
            </div>
