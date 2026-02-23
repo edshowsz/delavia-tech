@@ -21,7 +21,7 @@ const services = [
   },
   {
     id: "data",
-    title: "Data Engineering",
+    title: "Engenharia de dados",
     icon: Database,
     shortDesc: "Fundação",
     description: "A base de tudo. Coletamos, limpamos e estruturamos seus dados para que sejam confiáveis.",

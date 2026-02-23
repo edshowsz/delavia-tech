@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <main className="bg-[#050505] min-h-screen text-white selection:bg-primary selection:text-white">
       <Navbar onContactClick={openModal} />
-      <PainPoints />
       <IntegrationConcept />
+      <PainPoints />
       <Methodology />
       <Services />
       <Footer onContactClick={openModal} />
