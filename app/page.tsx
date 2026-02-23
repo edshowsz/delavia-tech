@@ -18,11 +18,10 @@ export default function Home() {
   return (
     <main className="bg-[#050505] min-h-screen text-white selection:bg-primary selection:text-white">
       <Navbar onContactClick={openModal} />
-      <Hero onContactClick={openModal} />
       <PainPoints />
       <IntegrationConcept />
-      <Services />
       <Methodology />
+      <Services />
       <Footer onContactClick={openModal} />
       
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

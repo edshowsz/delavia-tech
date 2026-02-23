@@ -60,27 +60,8 @@ const services = [
 
 export default function Services() {
   const [activeStep, setActiveStep] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   
-  // Resume auto-play after interaction
-  useEffect(() => {
-    if (!isPaused) return;
-    const timeout = setTimeout(() => {
-      setIsPaused(false);
-    }, 10000); // Resume after 10s of inactivity
-
-    return () => clearTimeout(timeout);
-  }, [isPaused]);
-
-  // Auto-play logic
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % services.length);
-    }, 4000); 
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
+  // No auto-play, interaction based
 
   return (
     <section id="solutions" className="py-24 bg-black relative overflow-hidden min-h-[800px] flex flex-col justify-center">
@@ -145,7 +126,8 @@ export default function Services() {
                 <div 
                   key={service.id}
                   className="relative flex flex-col items-center group cursor-pointer z-10"
-                  onClick={() => { setActiveStep(index); setIsPaused(true); }}
+                  onClick={() => setActiveStep(index)} // Mobile click
+                  onMouseEnter={() => setActiveStep(index)} // Desktop hover
                 >
                   {/* Step Marker/Icon */}
                   <motion.div 

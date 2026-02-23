@@ -26,13 +26,13 @@ export default function Hero({ onContactClick }: HeroProps) {
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <button 
             onClick={onContactClick}
-            className="group relative bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+            className="group relative bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(255,107,0,0.3)] hover:shadow-[0_0_30px_rgba(255,107,0,0.5)]"
           >
-            Iniciar Transformação
+            Agendar Diagnóstico
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <a href="#solutions" className="px-8 py-4 rounded-lg font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all">
-            Explorar Soluções
+          <a href="#solutions" className="px-8 py-4 rounded-lg font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm uppercase tracking-wide">
+            Conheça nossa Consultoria
           </a>
         </div>
 

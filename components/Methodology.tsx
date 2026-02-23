@@ -17,6 +17,9 @@ export default function Methodology() {
               Não vendemos <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400 decoration-line-through">bodyshop</span>.
               <br />
               <br />
+              Não vendemos <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400 decoration-line-through">Software</span>.
+              <br />
+              <br />
               Vendemos <span className="text-primary">consultoria especializada</span>.
             </h2>
             
