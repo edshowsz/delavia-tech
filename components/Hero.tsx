@@ -11,7 +11,7 @@ export default function Hero({ onContactClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] md:w-[1000px] h-[300px] md:h-[500px] bg-primary/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 -z-10" />
       
       <div className="max-w-7xl mx-auto px-6 text-center z-10">

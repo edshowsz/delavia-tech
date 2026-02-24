@@ -24,7 +24,7 @@ export default function Methodology() {
 
           {/* Visual Representation */}
           <div className="relative">
-             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent blur-[80px] rounded-full pointer-events-none" />
+             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent blur-[60px] md:blur-[80px] rounded-full pointer-events-none" />
              
              <div className="grid gap-6 relative z-10">
                 

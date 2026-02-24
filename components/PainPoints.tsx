@@ -6,7 +6,7 @@ export default function PainPoints() {
   
   return (
     <section id="pain-points" className="py-24 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/10 rounded-full blur-[80px] md:blur-[100px] -z-10 translate-x-1/3 md:translate-x-1/2" />
       
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 md:flex justify-between items-end">

@@ -76,14 +76,14 @@ export const SITE_CONTENT = {
       ]
     },
     dataSources: [
-      { name: "Vendas (CRM)", x: "15%", y: "15%", delay: "0.1s", duration: "3s", reverseDelay: "1.5s" },
-      { name: "Financeiro (ERP)", x: "85%", y: "85%", delay: "0.8s", duration: "4s", reverseDelay: "2.2s" },
-      { name: "Marketing & Ads", x: "85%", y: "15%", delay: "1.3s", duration: "2.8s", reverseDelay: "0.5s" },
-      { name: "Suporte & CS", x: "15%", y: "85%", delay: "0.4s", duration: "3.5s", reverseDelay: "2.8s" },
-      { name: "E-commerce", x: "50%", y: "10%", delay: "1.9s", duration: "3.2s", reverseDelay: "1.0s" },
-      { name: "RH & Pessoas", x: "50%", y: "90%", delay: "2.5s", duration: "4.2s", reverseDelay: "3.1s" },
-      { name: "Operações & Projetos", x: "10%", y: "50%", delay: "0.6s", duration: "2.9s", reverseDelay: "1.8s" },
-      { name: "Pagamentos & Cobrança", x: "90%", y: "50%", delay: "1.1s", duration: "3.8s", reverseDelay: "2.5s" },
+      { name: "Vendas (CRM)", x: "20%", y: "20%", delay: "0.1s", duration: "3s", reverseDelay: "1.5s" },
+      { name: "Financeiro (ERP)", x: "80%", y: "80%", delay: "0.8s", duration: "4s", reverseDelay: "2.2s" },
+      { name: "Marketing & Ads", x: "80%", y: "20%", delay: "1.3s", duration: "2.8s", reverseDelay: "0.5s" },
+      { name: "Suporte & CS", x: "20%", y: "80%", delay: "0.4s", duration: "3.5s", reverseDelay: "2.8s" },
+      { name: "E-commerce", x: "50%", y: "15%", delay: "1.9s", duration: "3.2s", reverseDelay: "1.0s" },
+      { name: "RH & Pessoas", x: "50%", y: "85%", delay: "2.5s", duration: "4.2s", reverseDelay: "3.1s" },
+      { name: "Operações & Projetos", x: "15%", y: "50%", delay: "0.6s", duration: "2.9s", reverseDelay: "1.8s" },
+      { name: "Pagamentos & Cobrança", x: "85%", y: "50%", delay: "1.1s", duration: "3.8s", reverseDelay: "2.5s" },
     ]
   },
   painPoints: {

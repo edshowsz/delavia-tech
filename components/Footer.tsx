@@ -12,8 +12,8 @@ export default function Footer({ onContactClick }: FooterProps) {
   return (
     <footer className="border-t border-white/10 bg-[#050505] pt-20 pb-10">
       <div id="contact" className="max-w-7xl mx-auto px-6 mb-20">
-        <div className="bg-gradient-to-r from-primary/20 to-transparent p-12 rounded-3xl border border-primary/20 relative overflow-hidden text-center md:text-left">
-           <div className="absolute right-0 top-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full -z-10" />
+        <div className="bg-gradient-to-b md:bg-gradient-to-r from-primary/20 to-transparent p-8 md:p-12 rounded-3xl border border-primary/20 relative overflow-hidden text-center md:text-left">
+           <div className="absolute right-0 top-0 w-[200px] md:w-64 h-[200px] md:h-64 bg-primary/20 blur-[60px] md:blur-[100px] rounded-full -z-10" />
            
            <div className="md:flex justify-between items-center gap-8">
              <div>

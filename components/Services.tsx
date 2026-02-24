@@ -56,7 +56,7 @@ export default function Services() {
           </div>
 
           {/* Connecting Line (Mobile) - Vertical Timeline */}
-          <div className="lg:hidden absolute top-[40px] left-1/2 -translate-x-1/2 w-[2px] h-[calc(100%-80px)] bg-white/10 z-0 pointer-events-none">
+          <div className="lg:hidden absolute top-[40px] left-[56px] w-[2px] h-[calc(100%-80px)] bg-white/10 z-0 pointer-events-none">
              <motion.div 
                className="w-full bg-gradient-to-b from-primary to-orange-400 origin-top"
                animate={{ height: `${(activeStep / (services.items.length - 1)) * 100}%` }}
@@ -68,44 +68,49 @@ export default function Services() {
             {services.items.map((service, index) => {
               const isActive = index === activeStep;
               const isPast = index < activeStep;
+              const isNext = index === activeStep + 1;
               const Icon = service.icon;
 
               return (
                 <div 
                   key={service.id}
-                  className="relative flex flex-col items-center group cursor-pointer z-10"
+                  className="relative flex flex-col items-center group cursor-pointer z-10 w-full lg:w-auto px-4 lg:px-0"
                   onClick={() => setActiveStep(index)} // Mobile click
                   onMouseEnter={() => setActiveStep(index)} // Desktop hover
                 >
-                  {/* Step Marker/Icon */}
-                  <motion.div 
-                    className={cn(
-                      "w-20 h-20 rounded-full flex items-center justify-center border-2 transition-all duration-500 relative bg-black",
-                      isActive ? "border-primary shadow-[0_0_30px_rgba(255,107,0,0.5)] scale-110" : 
-                      isPast ? "border-primary text-white" : "border-white/10 text-gray-600"
-                    )}
-                    animate={{
-                      scale: isActive ? 1.1 : 1,
-                      borderColor: isActive || isPast ? "#FF6B00" : "rgba(255,255,255,0.1)"
-                    }}
-                  >
-                    <Icon size={32} className={cn(
-                      "transition-all duration-300",
-                      isActive ? "text-primary" : isPast ? "text-white" : "text-gray-600"
-                    )} />
-                  </motion.div>
+                  <div className="flex flex-row lg:flex-col items-center w-full lg:w-auto">
+                    {/* Step Marker/Icon */}
+                    <motion.div 
+                      className={cn(
+                        "w-20 h-20 shrink-0 rounded-full flex items-center justify-center border-2 transition-all duration-500 relative bg-black",
+                        isActive ? "border-primary shadow-[0_0_30px_rgba(255,107,0,0.5)] scale-110" : 
+                        isPast ? "border-primary text-white" : 
+                        isNext ? "border-primary/40 text-gray-400 shadow-[0_0_15px_rgba(255,107,0,0.2)]" :
+                        "border-white/10 text-gray-600"
+                      )}
+                      animate={{
+                        scale: isActive ? 1.1 : 1,
+                        borderColor: isActive || isPast ? "#FF6B00" : isNext ? "rgba(255, 107, 0, 0.4)" : "rgba(255,255,255,0.1)"
+                      }}
+                    >
+                      <Icon size={32} className={cn(
+                        "transition-all duration-300",
+                        isActive ? "text-primary" : isPast ? "text-white" : isNext ? "text-primary/60" : "text-gray-600"
+                      )} />
+                    </motion.div>
 
-                  {/* Label */}
-                  <div className="mt-4 text-center">
-                    <h3 className={cn(
-                      "text-lg font-bold transition-colors duration-300",
-                      isActive ? "text-white" : "text-gray-500"
-                    )}>
-                      {service.title}
-                    </h3>
-                    <span className="text-xs text-primary uppercase tracking-wider font-semibold opacity-80 block mt-1">
-                      {service.shortDesc}
-                    </span>
+                    {/* Label */}
+                    <div className="ml-6 lg:ml-0 lg:mt-4 text-left lg:text-center">
+                      <h3 className={cn(
+                        "text-lg font-bold transition-colors duration-300",
+                        isActive ? "text-white" : "text-gray-500"
+                      )}>
+                        {service.title}
+                      </h3>
+                      <span className="text-xs text-primary uppercase tracking-wider font-semibold opacity-80 block mt-1">
+                        {service.shortDesc}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Active Card Details - DESKTOP ONLY */}

@@ -10,7 +10,7 @@ export default function IntegrationConcept() {
       
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[800px] h-[300px] md:h-[400px] bg-primary/5 blur-[80px] md:blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
 
@@ -60,7 +60,7 @@ export default function IntegrationConcept() {
                     {DATA_SOURCES.map((source, index) => (
                       <div 
                         key={`chaos-${index}`}
-                        className="absolute -translate-x-1/2 -translate-y-1/2 p-1.5 md:p-2 bg-red-500/5 border border-red-500/10 rounded text-[8px] md:text-[10px] text-gray-400 flex items-center gap-1 z-10 max-w-[70px] md:max-w-max text-center md:text-left justify-center md:justify-start"
+                        className="absolute -translate-x-1/2 -translate-y-1/2 p-1 md:p-2 bg-red-500/5 border border-red-500/10 rounded text-[8px] md:text-[10px] text-gray-400 flex items-center gap-1 z-10 max-w-[60px] md:max-w-max text-center md:text-left justify-center md:justify-start"
                         style={{ top: source.y, left: source.x }}
                       >
                           <div className="w-1 h-1 md:w-1.5 md:h-1.5 shrink-0 rounded-full bg-red-500 animate-pulse" />
@@ -68,9 +68,9 @@ export default function IntegrationConcept() {
                       </div>
                     ))}
 
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 bg-[#080808] border border-white/10 rounded-xl shadow-xl z-20 text-center w-40">
-                       <AlertTriangle className="mx-auto text-yellow-500 mb-2" size={24} />
-                       <span className="text-[10px] text-gray-500 leading-tight block">{integrationConcept.chaos.centerNode.title} <br/> {integrationConcept.chaos.centerNode.subtitle}</span>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 md:p-4 bg-[#080808] border border-white/10 rounded-xl shadow-xl z-20 text-center w-32 md:w-40">
+                       <AlertTriangle className="mx-auto text-yellow-500 mb-2" size={20} />
+                       <span className="text-[9px] md:text-[10px] text-gray-500 leading-tight block">{integrationConcept.chaos.centerNode.title} <br/> {integrationConcept.chaos.centerNode.subtitle}</span>
                     </div>
 
                     {/* Broken Lines connecting everything to Center (Manual Process) */}
