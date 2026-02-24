@@ -92,7 +92,7 @@ export const SITE_CONTENT = {
       part1: "Onde sua operação",
       highlight: "trava?"
     },
-    description: "Muitas empresas acumulam dados mas não geram valor.",
+    description: "",
     cards: [
       {
         title: "Dados Desconectados",
