@@ -1,5 +1,16 @@
 import { Link2, Layers, Cpu, Zap, XCircle, CheckCircle2, AlertTriangle, ArrowRightLeft } from "lucide-react";
 
+const DATA_SOURCES = [
+  { name: "Vendas & CRM", x: "15%", y: "15%", delay: "0.1s", duration: "3s", reverseDelay: "1.5s" },
+  { name: "Financeiro", x: "85%", y: "85%", delay: "0.8s", duration: "4s", reverseDelay: "2.2s" },
+  { name: "Marketing", x: "85%", y: "15%", delay: "1.3s", duration: "2.8s", reverseDelay: "0.5s" },
+  { name: "Customer Success", x: "15%", y: "85%", delay: "0.4s", duration: "3.5s", reverseDelay: "2.8s" },
+  { name: "E-commerce", x: "50%", y: "10%", delay: "1.9s", duration: "3.2s", reverseDelay: "1.0s" },
+  { name: "Pessoas (RH)", x: "50%", y: "90%", delay: "2.5s", duration: "4.2s", reverseDelay: "3.1s" },
+  { name: "Operações", x: "10%", y: "50%", delay: "0.6s", duration: "2.9s", reverseDelay: "1.8s" },
+  { name: "Logística", x: "90%", y: "50%", delay: "1.1s", duration: "3.8s", reverseDelay: "2.5s" },
+];
+
 export default function IntegrationConcept() {
   return (
     <section className="py-24 bg-[#080808] relative overflow-hidden border-t border-white/5">
@@ -55,32 +66,41 @@ export default function IntegrationConcept() {
                      </div>
                 </div>
                 
-                <div className="flex-1 relative min-h-[300px] bg-[#111] rounded-2xl border border-white/5 p-6 mb-6">
+                <div className="flex-1 relative min-h-[400px] bg-[#111] rounded-2xl border border-white/5 p-6 mb-6 overflow-hidden">
                     {/* Disconnected Elements */}
-                    <div className="absolute top-4 left-4 p-3 bg-red-500/5 border border-red-500/10 rounded-lg text-xs text-gray-400 flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                        CRM Vendas
-                    </div>
-                    <div className="absolute bottom-12 right-4 p-3 bg-red-500/5 border border-red-500/10 rounded-lg text-xs text-gray-400 flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                        Financeiro (ERP)
-                    </div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 bg-[#080808] border border-white/10 rounded-xl shadow-xl z-10 text-center w-40">
+                    
+                    {DATA_SOURCES.map((source, index) => (
+                      <div 
+                        key={`chaos-${index}`}
+                        className="absolute -translate-x-1/2 -translate-y-1/2 p-2 bg-red-500/5 border border-red-500/10 rounded text-[10px] text-gray-400 flex items-center gap-1.5 z-10 min-w-max"
+                        style={{ top: source.y, left: source.x }}
+                      >
+                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                          {source.name}
+                      </div>
+                    ))}
+
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 bg-[#080808] border border-white/10 rounded-xl shadow-xl z-20 text-center w-40">
                        <AlertTriangle className="mx-auto text-yellow-500 mb-2" size={24} />
                        <span className="text-[10px] text-gray-500 leading-tight block">Transferência Manual <br/> (Copy & Paste)</span>
                     </div>
 
-                    <div className="absolute top-8 right-8 p-3 bg-red-500/5 border border-red-500/10 rounded-lg text-xs text-gray-400 opacity-50">
-                        Marketing
-                    </div>
-                    <div className="absolute bottom-8 left-8 p-3 bg-red-500/5 border border-red-500/10 rounded-lg text-xs text-gray-400 opacity-50">
-                        Planilhas Support
-                    </div>
-
-                    {/* Broken Lines */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
-                       <path d="M80 50 L 150 130" stroke="red" strokeWidth="1" strokeDasharray="5 5" />
-                       <path d="M250 250 L 190 180" stroke="red" strokeWidth="1" strokeDasharray="5 5" />
+                    {/* Broken Lines connecting everything to Center (Manual Process) */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30 z-0">
+                       {DATA_SOURCES.map((source, index) => (
+                         <line 
+                           key={`chaos-line-${index}`}
+                           x1={source.x} 
+                           y1={source.y} 
+                           x2="50%" 
+                           y2="50%" 
+                           stroke="red" 
+                           strokeWidth="1" 
+                           strokeDasharray="4 4" 
+                           className="animate-pulse"
+                           style={{ animationDelay: source.delay }}
+                         />
+                       ))}
                     </svg>
                 </div>
 
@@ -107,7 +127,7 @@ export default function IntegrationConcept() {
                      </div>
                 </div>
                 
-                <div className="flex-1 relative min-h-[300px] bg-[#111] rounded-2xl border border-white/5 p-6 mb-6 flex items-center justify-center overflow-hidden">
+                <div className="flex-1 relative min-h-[400px] bg-[#111] rounded-2xl border border-white/5 p-6 mb-6 flex items-center justify-center overflow-hidden">
                     {/* Central Brain */}
                     <div className="relative z-10">
                         <div className="w-20 h-20 bg-gradient-to-br from-primary to-orange-600 rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(255,107,0,0.3)]">
@@ -118,33 +138,108 @@ export default function IntegrationConcept() {
                         <div className="absolute -inset-16 border border-primary/10 rounded-full animate-spin-slow duration-[15s] reverse" />
                     </div>
 
-                    {/* Connected Nodes */}
-                    <div className="absolute top-[15%] left-[10%] px-3 py-1.5 bg-[#1A1A1A] rounded border border-primary/30 text-[10px] text-gray-300 shadow-lg flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]" /> CRM
-                    </div>
-                    <div className="absolute bottom-[20%] right-[10%] px-3 py-1.5 bg-[#1A1A1A] rounded border border-primary/30 text-[10px] text-gray-300 shadow-lg flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]" /> ERP
-                    </div>
-                     <div className="absolute top-[20%] right-[15%] px-3 py-1.5 bg-[#1A1A1A] rounded border border-primary/30 text-[10px] text-gray-300 shadow-lg flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]" /> Mkt
-                    </div>
-                    <div className="absolute bottom-[25%] left-[15%] px-3 py-1.5 bg-[#1A1A1A] rounded border border-primary/30 text-[10px] text-gray-300 shadow-lg flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]" /> BI
-                    </div>
+                    {/* Connected Nodes - Organized with Percentages to match SVG lines */}
+                    {DATA_SOURCES.map((source, index) => (
+                      <div 
+                        key={`order-${index}`}
+                        className="absolute -translate-x-1/2 -translate-y-1/2 px-2 py-1 bg-[#1A1A1A] rounded border border-primary/30 text-[10px] text-gray-300 shadow-lg flex items-center gap-1.5 transition-all hover:scale-110 hover:border-primary/60 hover:z-20 min-w-max"
+                        style={{ top: source.y, left: source.x }}
+                      >
+                          <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]" /> 
+                          {source.name}
+                      </div>
+                    ))}
 
-                    {/* Glowing Connections */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                        <line x1="50%" y1="50%" x2="20%" y2="20%" stroke="url(#lineGradient)" strokeWidth="1" className="opacity-50" />
-                        <line x1="50%" y1="50%" x2="80%" y2="75%" stroke="url(#lineGradient)" strokeWidth="1" className="opacity-50" />
-                        <line x1="50%" y1="50%" x2="80%" y2="25%" stroke="url(#lineGradient)" strokeWidth="1" className="opacity-50" />
-                        <line x1="50%" y1="50%" x2="25%" y2="70%" stroke="url(#lineGradient)" strokeWidth="1" className="opacity-50" />
-                        
-                        <defs>
-                          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#FF6B00" stopOpacity="0.2" />
-                            <stop offset="100%" stopColor="#FF6B00" stopOpacity="0.8" />
-                          </linearGradient>
-                        </defs>
+                    {/* Glowing Connections - Matching Percentage Coordinates */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                        {DATA_SOURCES.map((source, index) => (
+                          <g key={`order-line-group-${index}`}>
+                            {/* Line to center */}
+                            <line 
+                              x1={source.x} 
+                              y1={source.y} 
+                              x2="50%" 
+                              y2="50%" 
+                              stroke="#FF6B00" 
+                              strokeOpacity="0.2"
+                              strokeWidth="1" 
+                            />
+                            
+                            {/* 1. Dot moving Source -> Center (Inbound) */}
+                            <circle cx={source.x} cy={source.y} r="2" fill="#FF6B00">
+                              <animate 
+                                attributeName="cx" 
+                                from={source.x} 
+                                to="50%" 
+                                dur={source.duration} 
+                                begin={source.delay} 
+                                repeatCount="indefinite" 
+                              />
+                              <animate 
+                                attributeName="cy" 
+                                from={source.y} 
+                                to="50%" 
+                                dur={source.duration} 
+                                begin={source.delay} 
+                                repeatCount="indefinite" 
+                              />
+                              <animate 
+                                attributeName="opacity" 
+                                values="0;1;1;0" 
+                                keyTimes="0;0.1;0.9;1" 
+                                dur={source.duration} 
+                                begin={source.delay} 
+                                repeatCount="indefinite" 
+                              />
+                            </circle>
+
+                            {/* 2. Dot moving Center -> Source (Outbound/Response) */}
+                            <circle cx="50%" cy="50%" r="2" fill="#22c55e" opacity="0.8">
+                              <animate 
+                                attributeName="cx" 
+                                from="50%" 
+                                to={source.x} 
+                                dur={source.duration} 
+                                begin={source.reverseDelay} 
+                                repeatCount="indefinite" 
+                              />
+                              <animate 
+                                attributeName="cy" 
+                                from="50%" 
+                                to={source.y} 
+                                dur={source.duration} 
+                                begin={source.reverseDelay} 
+                                repeatCount="indefinite" 
+                              />
+                              <animate 
+                                attributeName="opacity" 
+                                values="0;1;1;0" 
+                                keyTimes="0;0.1;0.8;1" 
+                                dur={source.duration}
+                                begin={source.reverseDelay} 
+                                repeatCount="indefinite" 
+                              />
+                            </circle>
+
+                            {/* Static Pulse Effect on Node (Replacing animate-ping to avoid offset issues) */}
+                            <circle cx={source.x} cy={source.y} r="2" fill="#FF6B00" opacity="0.5">
+                                <animate 
+                                    attributeName="r" 
+                                    values="2;6;2" 
+                                    dur="3s" 
+                                    begin={source.delay} 
+                                    repeatCount="indefinite" 
+                                />
+                                <animate 
+                                    attributeName="opacity" 
+                                    values="0.5;0;0.5" 
+                                    dur="3s" 
+                                    begin={source.delay} 
+                                    repeatCount="indefinite" 
+                                />
+                            </circle>
+                          </g>
+                        ))}
                     </svg>
                 </div>
 
