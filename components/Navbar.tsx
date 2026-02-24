@@ -1,13 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
 interface NavbarProps {
   onContactClick: () => void;
 }
 
 export default function Navbar({ onContactClick }: NavbarProps) {
-  const { navbar } = SITE_CONTENT;
+  const { navbar } = useContent();
   return (
     <nav className="fixed top-0 w-full z-50 glass-card border-b border-white/5 bg-black/50 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">

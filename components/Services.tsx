@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
 export default function Services() {
-  const { services } = SITE_CONTENT;
+  const { services } = useContent();
   const [activeStep, setActiveStep] = useState(0);
   
   // No auto-play, interaction based

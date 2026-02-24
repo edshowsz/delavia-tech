@@ -1,8 +1,10 @@
+"use client";
+
 import { Link2, Layers, Cpu, Zap, XCircle, CheckCircle2, AlertTriangle, ArrowRightLeft } from "lucide-react";
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
 export default function IntegrationConcept() {
-  const { integrationConcept } = SITE_CONTENT;
+  const { integrationConcept } = useContent();
   const DATA_SOURCES = integrationConcept.dataSources;
 
   return (
@@ -44,11 +46,11 @@ export default function IntegrationConcept() {
         <div className="grid md:grid-cols-2 gap-8 items-stretch mt-12">
             
             {/* Left: Chaos */}
-            <div className="bg-[#0A0A0A] p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:border-red-900/30 transition-all flex flex-col">
-                <div className="absolute top-0 left-0 w-full h-1 bg-red-500/20" />
+            <div className="bg-[#0A0A0A] p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:border-white/10 transition-all flex flex-col">
+                <div className="absolute top-0 left-0 w-full h-1 bg-white/10" />
                 
                 <div className="flex items-center justify-between mb-8">
-                     <div className="flex items-center gap-2 text-red-400">
+                     <div className="flex items-center gap-2 text-gray-400">
                         <XCircle size={20} />
                         <span className="text-sm font-bold uppercase tracking-widest">{integrationConcept.chaos.title}</span>
                      </div>
@@ -63,7 +65,7 @@ export default function IntegrationConcept() {
                         className="absolute -translate-x-1/2 -translate-y-1/2 p-1 md:p-2 bg-zinc-900 border border-white/10 rounded text-[8px] md:text-[10px] text-gray-400 flex items-center gap-1 z-10 max-w-[60px] md:max-w-max text-center md:text-left justify-center md:justify-start"
                         style={{ top: source.y, left: source.x }}
                       >
-                          <div className="w-1 h-1 md:w-1.5 md:h-1.5 shrink-0 rounded-full bg-red-500 animate-pulse" />
+                          <div className="w-1 h-1 md:w-1.5 md:h-1.5 shrink-0 rounded-full bg-red-500/50 animate-pulse" />
                           <span className="leading-tight break-words">{source.name}</span>
                       </div>
                     ))}
@@ -74,7 +76,7 @@ export default function IntegrationConcept() {
                     </div>
 
                     {/* Broken Lines connecting everything to Center (Manual Process) */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30 z-0">
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20 z-0">
                        {DATA_SOURCES.map((source, index) => (
                          <line 
                            key={`chaos-line-${index}`}
@@ -82,10 +84,10 @@ export default function IntegrationConcept() {
                            y1={source.y} 
                            x2="50%" 
                            y2="50%" 
-                           stroke="red" 
+                           stroke="currentColor" 
                            strokeWidth="1" 
                            strokeDasharray="4 4" 
-                           className="animate-pulse"
+                           className="text-gray-600 animate-pulse"
                            style={{ animationDelay: source.delay }}
                          />
                        ))}
@@ -93,13 +95,17 @@ export default function IntegrationConcept() {
                 </div>
 
                 <div className="space-y-4">
-                    <div className="flex items-start gap-3 p-3 rounded-lg bg-red-500/5 border border-red-500/10">
-                        <XCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
-                        <p className="text-xs text-gray-400 text-left"><strong className="text-red-400 block mb-1">{integrationConcept.chaos.points[0].title}</strong>{integrationConcept.chaos.points[0].description}</p>
+                    <div className="flex items-start gap-3 p-3 rounded-lg bg-zinc-900 border border-white/10">
+                        <XCircle size={16} className="text-gray-500 mt-0.5 shrink-0" />
+                        <p className="text-xs text-gray-400 text-left"><strong className="text-gray-300 block mb-1">{integrationConcept.chaos.points[0].title}</strong>{integrationConcept.chaos.points[0].description}</p>
                     </div>
-                    <div className="flex items-start gap-3 p-3 rounded-lg bg-red-500/5 border border-red-500/10">
-                        <XCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
-                        <p className="text-xs text-gray-400 text-left"><strong className="text-red-400 block mb-1">{integrationConcept.chaos.points[1].title}</strong>{integrationConcept.chaos.points[1].description}</p>
+                    <div className="flex items-start gap-3 p-3 rounded-lg bg-zinc-900 border border-white/10">
+                        <XCircle size={16} className="text-gray-500 mt-0.5 shrink-0" />
+                        <p className="text-xs text-gray-400 text-left"><strong className="text-gray-300 block mb-1">{integrationConcept.chaos.points[1].title}</strong>{integrationConcept.chaos.points[1].description}</p>
+                    </div>
+                     <div className="flex items-start gap-3 p-3 rounded-lg bg-zinc-900 border border-white/10">
+                        <XCircle size={16} className="text-gray-500 mt-0.5 shrink-0" />
+                        <p className="text-xs text-gray-400 text-left"><strong className="text-gray-300 block mb-1">{integrationConcept.chaos.points[2].title}</strong>{integrationConcept.chaos.points[2].description}</p>
                     </div>
                 </div>
             </div>

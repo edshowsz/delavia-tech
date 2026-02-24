@@ -3,7 +3,7 @@
 import { X } from "lucide-react";
 import { useEffect } from "react";
 
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -11,7 +11,7 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
-  const { contactModal } = SITE_CONTENT;
+  const { contactModal } = useContent();
 
   useEffect(() => {
     if (isOpen) {

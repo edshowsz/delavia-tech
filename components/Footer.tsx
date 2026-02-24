@@ -1,13 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight, Linkedin } from "lucide-react";
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
  interface FooterProps {
   onContactClick: () => void;
 }
 
 export default function Footer({ onContactClick }: FooterProps) {
-  const { cta, footer } = SITE_CONTENT;
+  const { cta, footer } = useContent();
   
   return (
     <footer className="border-t border-white/10 bg-[#050505] pt-20 pb-10">

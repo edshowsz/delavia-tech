@@ -9,14 +9,14 @@ import Services from "@/components/Services";
 import Methodology from "@/components/Methodology";
 import Footer from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
 
-  const { navbar, hero, integrationConcept, painPoints, methodology, services, footer, contactModal } = SITE_CONTENT;
+  const { navbar, hero, integrationConcept, painPoints, methodology, services, footer, contactModal } = useContent();
 
   return (
     <main className="bg-[#050505] min-h-screen text-white selection:bg-primary selection:text-white">

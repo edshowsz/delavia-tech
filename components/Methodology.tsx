@@ -1,8 +1,10 @@
-import { SITE_CONTENT } from "@/lib/content";
+"use client";
+
+import { useContent } from "@/lib/ContentContext";
 import { Handshake } from "lucide-react";
 
 export default function Methodology() {
-  const { methodology } = SITE_CONTENT;
+  const { methodology } = useContent();
   
   return (
     <section className="py-24 bg-zinc-950 relative border-t border-white/5">

@@ -1,8 +1,10 @@
+"use client";
+
 import { AlertTriangle, Clock, SearchX } from "lucide-react";
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
 export default function PainPoints() {
-  const { painPoints } = SITE_CONTENT;
+  const { painPoints } = useContent();
   
   return (
     <section id="pain-points" className="py-24 relative overflow-hidden">

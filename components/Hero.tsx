@@ -1,12 +1,14 @@
+"use client";
+
 import { ArrowRight, Database, Bot, Zap } from "lucide-react";
-import { SITE_CONTENT } from "@/lib/content";
+import { useContent } from "@/lib/ContentContext";
 
 interface HeroProps {
   onContactClick: () => void;
 }
 
 export default function Hero({ onContactClick }: HeroProps) {
-  const { hero } = SITE_CONTENT;
+  const { hero } = useContent();
   
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
