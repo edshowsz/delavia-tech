@@ -35,7 +35,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       />
       
       {/* Modal Content */}
-      <div className="relative w-full max-w-2xl bg-[#111] border border-white/10 rounded-2xl shadow-[0_0_50px_rgba(255,107,0,0.1)] overflow-hidden flex flex-col animate-fade-in-up h-[85vh] max-h-[800px]">
+      <div className="relative w-full max-w-2xl bg-[#111] border border-white/10 rounded-2xl shadow-[0_0_50px_rgba(255,255,255,0.05)] overflow-hidden flex flex-col animate-fade-in-up h-[85vh] max-h-[800px]">
         
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/10 bg-[#111] z-10">
@@ -49,7 +49,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         </div>
 
         {/* Decorative Top Line */}
-        <div className="absolute top-[60px] inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70" />
+        <div className="absolute top-[60px] inset-x-0 h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-70" />
 
         <div className="flex-1 w-full bg-[#111] overflow-hidden relative">
            <iframe 

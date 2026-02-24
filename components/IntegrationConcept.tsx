@@ -60,7 +60,7 @@ export default function IntegrationConcept() {
                     {DATA_SOURCES.map((source, index) => (
                       <div 
                         key={`chaos-${index}`}
-                        className="absolute -translate-x-1/2 -translate-y-1/2 p-1 md:p-2 bg-red-500/5 border border-red-500/10 rounded text-[8px] md:text-[10px] text-gray-400 flex items-center gap-1 z-10 max-w-[60px] md:max-w-max text-center md:text-left justify-center md:justify-start"
+                        className="absolute -translate-x-1/2 -translate-y-1/2 p-1 md:p-2 bg-zinc-900 border border-white/10 rounded text-[8px] md:text-[10px] text-gray-400 flex items-center gap-1 z-10 max-w-[60px] md:max-w-max text-center md:text-left justify-center md:justify-start"
                         style={{ top: source.y, left: source.x }}
                       >
                           <div className="w-1 h-1 md:w-1.5 md:h-1.5 shrink-0 rounded-full bg-red-500 animate-pulse" />
