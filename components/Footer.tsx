@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Linkedin } from "lucide-react";
 import { SITE_CONTENT } from "@/lib/content";
 
  interface FooterProps {
@@ -36,6 +36,17 @@ export default function Footer({ onContactClick }: FooterProps) {
         <div className="font-space font-bold text-white uppercase">
           {footer.company}
         </div>
+
+        {footer.social?.linkedin && (
+          <Link 
+            href={footer.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <Linkedin size={20} />
+          </Link>
+        )}
         
         <div>
           {footer.copyright}

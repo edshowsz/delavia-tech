@@ -125,7 +125,7 @@ export const SITE_CONTENT = {
       {
         title: "Parceria estratégica",
         description: "Você não precisa de mais devs, precisa de um parceiro que entenda seu negócio e gere valor.",
-        badge: "CONEXÃO",
+        badge: "",
         icon: Users
       },
       {
@@ -222,8 +222,10 @@ export const SITE_CONTENT = {
   footer: {
     visible: true,
     company: "Delavia Tech",
-    description: "Transformando dados em vantagem competitiva através de automação e inteligência artificial.",
-    copyright: "© 2024 Delavia Tech. Todos os direitos reservados."
+    copyright: "© Todos os direitos reservados.",
+    social: {
+      linkedin: "https://www.linkedin.com/company/delavia-tech/"
+    }
   },
   contactModal: {
     visible: true,
