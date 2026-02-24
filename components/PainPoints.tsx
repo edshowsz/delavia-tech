@@ -8,7 +8,6 @@ export default function PainPoints() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 md:flex justify-between items-end">
           <div className="max-w-xl">
-            <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Dores do Negócio</span>
             <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-4">
               Onde sua operação <span className="text-primary">trava?</span>
             </h2>

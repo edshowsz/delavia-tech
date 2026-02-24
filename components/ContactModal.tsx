@@ -35,7 +35,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/10 bg-[#111] z-10">
-           <h3 className="text-lg font-space font-bold text-white px-2">Falar com Especialista</h3>
+           <h3 className="text-lg font-space font-bold text-white px-2">Fale conosco</h3>
            <button 
              onClick={onClose}
              className="p-2 hover:bg-white/10 rounded-full transition-colors text-gray-400 hover:text-white"
@@ -47,13 +47,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         {/* Decorative Top Line */}
         <div className="absolute top-[60px] inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70" />
 
-        <div className="flex-1 w-full bg-white overflow-hidden relative">
+        <div className="flex-1 w-full bg-[#111] overflow-hidden relative">
            <iframe 
             src="https://forms.monday.com/forms/embed/687517e4625fde922a488ee5e3a470bd?r=use1" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }}
-            title="Formulário de Contato"
+            title="Fale conosco"
            />
         </div>
       </div>

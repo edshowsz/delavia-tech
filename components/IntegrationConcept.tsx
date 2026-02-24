@@ -1,14 +1,14 @@
 import { Link2, Layers, Cpu, Zap, XCircle, CheckCircle2, AlertTriangle, ArrowRightLeft } from "lucide-react";
 
 const DATA_SOURCES = [
-  { name: "Vendas & CRM", x: "15%", y: "15%", delay: "0.1s", duration: "3s", reverseDelay: "1.5s" },
-  { name: "Financeiro", x: "85%", y: "85%", delay: "0.8s", duration: "4s", reverseDelay: "2.2s" },
-  { name: "Marketing", x: "85%", y: "15%", delay: "1.3s", duration: "2.8s", reverseDelay: "0.5s" },
-  { name: "Customer Success", x: "15%", y: "85%", delay: "0.4s", duration: "3.5s", reverseDelay: "2.8s" },
+  { name: "Vendas (CRM)", x: "15%", y: "15%", delay: "0.1s", duration: "3s", reverseDelay: "1.5s" },
+  { name: "Financeiro (ERP)", x: "85%", y: "85%", delay: "0.8s", duration: "4s", reverseDelay: "2.2s" },
+  { name: "Marketing & Ads", x: "85%", y: "15%", delay: "1.3s", duration: "2.8s", reverseDelay: "0.5s" },
+  { name: "Suporte & CS", x: "15%", y: "85%", delay: "0.4s", duration: "3.5s", reverseDelay: "2.8s" },
   { name: "E-commerce", x: "50%", y: "10%", delay: "1.9s", duration: "3.2s", reverseDelay: "1.0s" },
-  { name: "Pessoas (RH)", x: "50%", y: "90%", delay: "2.5s", duration: "4.2s", reverseDelay: "3.1s" },
-  { name: "Operações", x: "10%", y: "50%", delay: "0.6s", duration: "2.9s", reverseDelay: "1.8s" },
-  { name: "Logística", x: "90%", y: "50%", delay: "1.1s", duration: "3.8s", reverseDelay: "2.5s" },
+  { name: "RH & Pessoas", x: "50%", y: "90%", delay: "2.5s", duration: "4.2s", reverseDelay: "3.1s" },
+  { name: "Operações & Projetos", x: "10%", y: "50%", delay: "0.6s", duration: "2.9s", reverseDelay: "1.8s" },
+  { name: "Pagamentos & Cobrança", x: "90%", y: "50%", delay: "1.1s", duration: "3.8s", reverseDelay: "2.5s" },
 ];
 
 export default function IntegrationConcept() {
@@ -20,10 +20,6 @@ export default function IntegrationConcept() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-        
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8 animate-fade-in-up">
-           <span className="text-xs font-medium text-primary tracking-wide uppercase">O Paradoxo da Tecnologia</span>
-        </div>
 
         <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-6">
           Sua empresa tem <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">ferramentas demais</span>,
@@ -32,7 +28,7 @@ export default function IntegrationConcept() {
         
         <p className="max-w-3xl mx-auto text-lg text-gray-400 mb-10 leading-relaxed">
           CRM, ERP, planilhas, ads, e-mail marketing... Você contratou o melhor software para cada função
-          e não pode deixar ilhas isoladas de informação.
+          e isso acabou criando ilhas isoladas de informação.
         </p>
 
         <div className="bg-zinc-900 border border-white/10 rounded-2xl p-8 mx-auto max-w-3xl mb-16 relative overflow-hidden group">
@@ -258,7 +254,7 @@ export default function IntegrationConcept() {
         </div>
 
       </div>
-      
+
     </section>
   );
 }

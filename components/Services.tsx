@@ -91,7 +91,7 @@ export default function Services() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg"
           >
-            Não entregamos soluções isoladas. Construímos um pipeline contínuo onde dados brutos se transformam em decisões autônomas.
+            Não entregamos soluções isoladas. Construímos um pipeline contínuo onde dados brutos se transformam em ações inteligentes, gerando valor real e mensurável para seu negócio.
           </motion.p>
         </div>
 

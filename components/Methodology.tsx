@@ -8,10 +8,6 @@ export default function Methodology() {
           
           {/* Text Content */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8">
-              <span className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-xs font-medium text-gray-300 tracking-wide uppercase">Nossa Filosofia</span>
-            </div>
             
             <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-6">
               Não vendemos <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400 decoration-line-through">bodyshop</span>.
@@ -24,11 +20,13 @@ export default function Methodology() {
             </h2>
             
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                O modelo tradicional de consultoria foca em volume: muitos desenvolvedores, qualidade questionável e alta rotatividade não funciona mais.
+                Você não precisa de mais uma ferramenta, você precisa fazer elas se comunicarem.
                 <br/><br/>
-                Não vendemos horas, vendemos resultados. 
+                Você não precisa de mais um time de desenvolvimento, você precisa de um parceiro que entenda seu negócio e saiba como gerar valor com tecnologia.
                 <br/><br/>
-                Entramos como parceiros estratégicos, entendendo profundamente seu negócio para entregar soluções que realmente impactam suas métricas-chave.
+                Você precisa de parceiros estratégicos, não de fornecedores. E é por isso que nosso modelo de negócio é baseado em resultados, não em horas ou licenças.
+                <br/><br/>
+                <strong>Cobramos 10% do ROI gerado</strong>, garantindo alinhamento total de interesses: crescimento mútuo e foco obsessivo em resultados tangíveis.
             </p>
 
           </div>
