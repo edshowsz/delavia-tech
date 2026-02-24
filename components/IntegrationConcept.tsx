@@ -15,7 +15,7 @@ export default function IntegrationConcept() {
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
 
         <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-6">
-          {integrationConcept.title.part1} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">{integrationConcept.title.highlight}</span>,
+          {integrationConcept.title.part1} <span className="text-primary">{integrationConcept.title.highlight}</span>,
           <br /> {integrationConcept.title.part2}
         </h2>
         

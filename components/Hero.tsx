@@ -18,7 +18,7 @@ export default function Hero({ onContactClick }: HeroProps) {
         
         <h1 className="font-space text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
           {hero.title.part1} <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">{hero.title.highlight}</span>
+          <span className="text-primary">{hero.title.highlight}</span>
         </h1>
         
         <p className="max-w-2xl mx-auto text-lg text-gray-400 mb-10 leading-relaxed">
