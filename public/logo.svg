@@ -1,0 +1,9 @@
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  <text x="10" y="55" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="40" fill="white" letter-spacing="-1">DELAVIA</text>
+  <text x="175" y="55" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="40" fill="#FF7A00" letter-spacing="-1">.TECH</text>
+</svg>

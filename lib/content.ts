@@ -91,7 +91,7 @@ export const SITE_CONTENT = {
       part1: "Onde sua operação",
       highlight: "trava?"
     },
-    description: "Muitas empresas acumulam dados mas não geram valor. Identificamos os gargalos que impedem seu crescimento exponencial.",
+    description: "Muitas empresas acumulam dados mas não geram valor.",
     cards: [
       {
         title: "Dados Desconectados",
@@ -216,7 +216,7 @@ export const SITE_CONTENT = {
     visible: true,
     title: "Pronto para escalar sua operação?",
     description: "Agende um diagnóstico gratuito e descubra onde estão os gargalos da sua operação.",
-    button: "Falar com Consultor"
+    button: "ESTOU PRONTO"
   },
   footer: {
     visible: true,

@@ -1,0 +1,14 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  <!-- Background Circle (Black Border) -->
+  <rect x="0" y="0" width="100" height="100" rx="30" fill="white" fill-opacity="0.05" />
+  <rect x="0" y="0" width="100" height="100" rx="30" stroke="#FF7A00" stroke-width="2" stroke-opacity="0.2" />
+  
+  <!-- "D" Symbol -->
+  <text x="50" y="65" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="60" fill="white" text-anchor="middle" letter-spacing="-2">D</text>
+  <circle cx="75" cy="75" r="4" fill="#FF7A00" />
+</svg>
