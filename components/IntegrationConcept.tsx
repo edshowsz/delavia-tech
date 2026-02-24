@@ -258,6 +258,7 @@ export default function IntegrationConcept() {
         </div>
 
       </div>
+      
     </section>
   );
 }
