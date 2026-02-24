@@ -9,22 +9,26 @@ import Services from "@/components/Services";
 import Methodology from "@/components/Methodology";
 import Footer from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
+import { SITE_CONTENT } from "@/lib/content";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
 
+  const { navbar, hero, integrationConcept, painPoints, methodology, services, footer, contactModal } = SITE_CONTENT;
+
   return (
     <main className="bg-[#050505] min-h-screen text-white selection:bg-primary selection:text-white">
-      <Navbar onContactClick={openModal} />
-      <IntegrationConcept />
-      <PainPoints />
-      <Methodology />
-      <Services />
-      <Footer onContactClick={openModal} />
+      {navbar.visible && <Navbar onContactClick={openModal} />}
+      {hero.visible && <Hero onContactClick={openModal} />}
+      {integrationConcept.visible && <IntegrationConcept />}
+      {painPoints.visible && <PainPoints />}
+      {methodology.visible && <Methodology />}
+      {services.visible && <Services />}
+      {footer.visible && <Footer onContactClick={openModal} />}
       
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      {contactModal.visible && <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </main>
   );
 }

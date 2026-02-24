@@ -1,17 +1,10 @@
 import { Link2, Layers, Cpu, Zap, XCircle, CheckCircle2, AlertTriangle, ArrowRightLeft } from "lucide-react";
-
-const DATA_SOURCES = [
-  { name: "Vendas (CRM)", x: "15%", y: "15%", delay: "0.1s", duration: "3s", reverseDelay: "1.5s" },
-  { name: "Financeiro (ERP)", x: "85%", y: "85%", delay: "0.8s", duration: "4s", reverseDelay: "2.2s" },
-  { name: "Marketing & Ads", x: "85%", y: "15%", delay: "1.3s", duration: "2.8s", reverseDelay: "0.5s" },
-  { name: "Suporte & CS", x: "15%", y: "85%", delay: "0.4s", duration: "3.5s", reverseDelay: "2.8s" },
-  { name: "E-commerce", x: "50%", y: "10%", delay: "1.9s", duration: "3.2s", reverseDelay: "1.0s" },
-  { name: "RH & Pessoas", x: "50%", y: "90%", delay: "2.5s", duration: "4.2s", reverseDelay: "3.1s" },
-  { name: "Operações & Projetos", x: "10%", y: "50%", delay: "0.6s", duration: "2.9s", reverseDelay: "1.8s" },
-  { name: "Pagamentos & Cobrança", x: "90%", y: "50%", delay: "1.1s", duration: "3.8s", reverseDelay: "2.5s" },
-];
+import { SITE_CONTENT } from "@/lib/content";
 
 export default function IntegrationConcept() {
+  const { integrationConcept } = SITE_CONTENT;
+  const DATA_SOURCES = integrationConcept.dataSources;
+
   return (
     <section className="py-24 bg-[#080808] relative overflow-hidden border-t border-white/5">
       
@@ -22,13 +15,12 @@ export default function IntegrationConcept() {
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
 
         <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-6">
-          Sua empresa tem <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">ferramentas demais</span>,
-          <br /> mas conexão de menos?
+          {integrationConcept.title.part1} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">{integrationConcept.title.highlight}</span>,
+          <br /> {integrationConcept.title.part2}
         </h2>
         
         <p className="max-w-3xl mx-auto text-lg text-gray-400 mb-10 leading-relaxed">
-          CRM, ERP, planilhas, ads, e-mail marketing... Você contratou o melhor software para cada função
-          e isso acabou criando ilhas isoladas de informação.
+          {integrationConcept.description}
         </p>
 
         <div className="bg-zinc-900 border border-white/10 rounded-2xl p-8 mx-auto max-w-3xl mb-16 relative overflow-hidden group">
@@ -39,10 +31,10 @@ export default function IntegrationConcept() {
             </div>
             <div className="text-left">
               <h3 className="text-xl text-white font-bold mb-2">
-                Sua operação precisa de <span className="text-primary">arquitetura</span>, não de mais assinaturas.
+                Sua operação precisa de <span className="text-primary">{integrationConcept.alertBox.highlight}</span>, não de mais assinaturas.
               </h3>
               <p className="text-gray-400 leading-relaxed text-sm">
-                Ao invés de vender mais um software para sua stack, nós projetamos a inteligência que conecta as ferramentas que você já usa em um fluxo unificado e rentável.
+                {integrationConcept.alertBox.description}
               </p>
             </div>
           </div>
@@ -58,7 +50,7 @@ export default function IntegrationConcept() {
                 <div className="flex items-center justify-between mb-8">
                      <div className="flex items-center gap-2 text-red-400">
                         <XCircle size={20} />
-                        <span className="text-sm font-bold uppercase tracking-widest">Cenário Atual (Silos)</span>
+                        <span className="text-sm font-bold uppercase tracking-widest">{integrationConcept.chaos.title}</span>
                      </div>
                 </div>
                 
@@ -78,7 +70,7 @@ export default function IntegrationConcept() {
 
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 bg-[#080808] border border-white/10 rounded-xl shadow-xl z-20 text-center w-40">
                        <AlertTriangle className="mx-auto text-yellow-500 mb-2" size={24} />
-                       <span className="text-[10px] text-gray-500 leading-tight block">Transferência Manual <br/> (Copy & Paste)</span>
+                       <span className="text-[10px] text-gray-500 leading-tight block">{integrationConcept.chaos.centerNode.title} <br/> {integrationConcept.chaos.centerNode.subtitle}</span>
                     </div>
 
                     {/* Broken Lines connecting everything to Center (Manual Process) */}
@@ -103,11 +95,11 @@ export default function IntegrationConcept() {
                 <div className="space-y-4">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-red-500/5 border border-red-500/10">
                         <XCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
-                        <p className="text-xs text-gray-400 text-left"><strong className="text-red-400 block mb-1">Dados Fragmentados</strong>Você nunca sabe qual o número real de vendas ou churn porque cada sistema diz uma coisa.</p>
+                        <p className="text-xs text-gray-400 text-left"><strong className="text-red-400 block mb-1">{integrationConcept.chaos.points[0].title}</strong>{integrationConcept.chaos.points[0].description}</p>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-red-500/5 border border-red-500/10">
                         <XCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
-                        <p className="text-xs text-gray-400 text-left"><strong className="text-red-400 block mb-1">Custo Humano Alto</strong>Sua equipe gasta 30% do tempo atualizando planilhas em vez de vender ou criar.</p>
+                        <p className="text-xs text-gray-400 text-left"><strong className="text-red-400 block mb-1">{integrationConcept.chaos.points[1].title}</strong>{integrationConcept.chaos.points[1].description}</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +111,7 @@ export default function IntegrationConcept() {
                  <div className="flex items-center justify-between mb-8">
                      <div className="flex items-center gap-2 text-primary">
                         <CheckCircle2 size={20} />
-                        <span className="text-sm font-bold uppercase tracking-widest">Nossa proposta</span>
+                        <span className="text-sm font-bold uppercase tracking-widest">{integrationConcept.order.title}</span>
                      </div>
                 </div>
                 
@@ -242,11 +234,11 @@ export default function IntegrationConcept() {
                 <div className="space-y-4">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
                         <ArrowRightLeft size={16} className="text-primary mt-0.5 shrink-0" />
-                        <p className="text-xs text-gray-400 text-left"><strong className="text-primary block mb-1">Sincronia Bidirecional</strong>Faturou no ERP? Atualiza o CRM. Lead converteu? Notifica o Slack. Tudo automático.</p>
+                        <p className="text-xs text-gray-400 text-left"><strong className="text-primary block mb-1">{integrationConcept.order.points[0].title}</strong>{integrationConcept.order.points[0].description}</p>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
                         <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
-                        <p className="text-xs text-gray-400 text-left"><strong className="text-primary block mb-1">Decisões em Tempo Real</strong>Dashboards que mostram a saúde do negócio agora, não o relatório do mês passado.</p>
+                        <p className="text-xs text-gray-400 text-left"><strong className="text-primary block mb-1">{integrationConcept.order.points[1].title}</strong>{integrationConcept.order.points[1].description}</p>
                     </div>
                 </div>
             </div>

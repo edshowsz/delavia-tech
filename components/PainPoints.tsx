@@ -1,6 +1,9 @@
 import { AlertTriangle, Clock, SearchX } from "lucide-react";
+import { SITE_CONTENT } from "@/lib/content";
 
 export default function PainPoints() {
+  const { painPoints } = SITE_CONTENT;
+  
   return (
     <section id="pain-points" className="py-24 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/2" />
@@ -9,10 +12,10 @@ export default function PainPoints() {
         <div className="mb-16 md:flex justify-between items-end">
           <div className="max-w-xl">
             <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-4">
-              Onde sua operação <span className="text-primary">trava?</span>
+              {painPoints.title.part1} <span className="text-primary">{painPoints.title.highlight}</span>
             </h2>
             <p className="text-gray-400 leading-relaxed">
-              Muitas empresas acumulam dados mas não geram valor. Identificamos os gargalos que impedem seu crescimento exponencial.
+              {painPoints.description}
             </p>
           </div>
         </div>
@@ -22,9 +25,9 @@ export default function PainPoints() {
             <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
               <SearchX />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Dados Desconectados</h3>
+            <h3 className="text-xl font-bold text-white mb-3">{painPoints.cards[0].title}</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Informações espalhadas em planilhas e sistemas que não conversam, gerando cegueira estratégica e relatórios manuais imprecisos.
+              {painPoints.cards[0].description}
             </p>
           </div>
 
@@ -32,9 +35,9 @@ export default function PainPoints() {
             <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
               <Clock />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Processos Lentos</h3>
+            <h3 className="text-xl font-bold text-white mb-3">{painPoints.cards[1].title}</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Equipes talentosas perdendo horas em tarefas repetitivas de "copy-paste" que poderiam ser resolvidas em segundos por automação.
+              {painPoints.cards[1].description}
             </p>
           </div>
 
@@ -42,9 +45,9 @@ export default function PainPoints() {
             <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
               <AlertTriangle />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Oportunidades Perdidas</h3>
+            <h3 className="text-xl font-bold text-white mb-3">{painPoints.cards[2].title}</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Enquanto concorrentes implementam IA para prever tendências e otimizar custos, sua empresa reage ao passado em vez de antecipar o futuro.
+              {painPoints.cards[2].description}
             </p>
           </div>
         </div>

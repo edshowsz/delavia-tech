@@ -1,64 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Bot, Network, Workflow, ShieldCheck, ArrowRight, Database, BrainCircuit, LineChart } from "lucide-react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-
-const services = [
-  {
-    id: "consulting",
-    title: "Consultoria",
-    icon: LineChart,
-    shortDesc: "Estratégia",
-    description: "O direcionamento. Diagnosticamos o cenário e desenhamos este pipeline de transformação.",
-    features: [
-      "Diagnóstico técnico da operação",
-      "Mapeamento de gargalos",
-      "Definição da arquitetura (To-Be)",
-      "Roadmap de transformação"
-    ]
-  },
-  {
-    id: "data",
-    title: "Engenharia de dados",
-    icon: Database,
-    shortDesc: "Fundação",
-    description: "A base de tudo. Coletamos, limpamos e estruturamos seus dados para que sejam confiáveis.",
-    features: [
-      "Data Lakes e Warehouses",
-      "Pipelines ETL/ELT robustos",
-      "Modelagem para Analytics",
-    ]
-  },
-  {
-    id: "automation",
-    title: "Automações Inteligentes",
-    icon: Workflow,
-    shortDesc: "Eficiência",
-    description: "Eliminamos o retrabalho manual. Criamos ecossistemas onde suas ferramentas (CRM, ERP, Marketing) conversam em tempo real.",
-    features: [
-      "Orquestração de workflows complexos",
-      "Sincronização bidirecional de sistemas",
-      "Alertas em tempo real"
-    ]
-  },
-  {
-    id: "ai",
-    title: "Agentes de IA",
-    icon: BrainCircuit,
-    shortDesc: "Inteligência",
-    description: "A inteligência em ação. Agentes autônomos consomem os dados para tomar decisões e agir.",
-    features: [
-      "Atendimento e Vendas via IA",
-      "RAG (Chat com seus dados)",
-      "Modelos Personalizados",
-      "Assistentes de Produtividade"
-    ]
-  }
-];
+import { SITE_CONTENT } from "@/lib/content";
 
 export default function Services() {
+  const { services } = SITE_CONTENT;
   const [activeStep, setActiveStep] = useState(0);
   
   // No auto-play, interaction based
@@ -75,7 +23,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block"
           >
-            Nosso Pipeline de Valor
+            {services.badge}
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +31,7 @@ export default function Services() {
             transition={{ delay: 0.1 }}
             className="font-space text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            O Fluxo da Inteligência
+            {services.title}
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -91,7 +39,7 @@ export default function Services() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg"
           >
-            Não entregamos soluções isoladas. Construímos um pipeline contínuo onde dados brutos se transformam em ações inteligentes, gerando valor real e mensurável para seu negócio.
+            {services.description}
           </motion.p>
         </div>
 
@@ -102,7 +50,7 @@ export default function Services() {
           <div className="hidden lg:block absolute top-[40px] left-0 w-full h-[2px] bg-white/10 z-0">
              <motion.div 
                className="h-full bg-gradient-to-r from-primary to-orange-400"
-               animate={{ width: `${(activeStep / (services.length - 1)) * 100}%` }}
+               animate={{ width: `${(activeStep / (services.items.length - 1)) * 100}%` }}
                transition={{ duration: 1, ease: "easeInOut" }}
              />
           </div>
@@ -111,13 +59,13 @@ export default function Services() {
           <div className="lg:hidden absolute top-[40px] left-1/2 -translate-x-1/2 w-[2px] h-[calc(100%-80px)] bg-white/10 z-0 pointer-events-none">
              <motion.div 
                className="w-full bg-gradient-to-b from-primary to-orange-400 origin-top"
-               animate={{ height: `${(activeStep / (services.length - 1)) * 100}%` }}
+               animate={{ height: `${(activeStep / (services.items.length - 1)) * 100}%` }}
                transition={{ duration: 1, ease: "easeInOut" }}
              />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => {
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+            {services.items.map((service, index) => {
               const isActive = index === activeStep;
               const isPast = index < activeStep;
               const Icon = service.icon;
