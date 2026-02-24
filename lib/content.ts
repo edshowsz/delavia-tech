@@ -63,15 +63,16 @@ export const SITE_CONTENT = {
         subtitle: "(Copy & Paste)"
       },
       points: [
-        { title: "Dados Fragmentados", description: "Você nunca sabe qual o número real de vendas ou churn porque cada sistema diz uma coisa." },
-        { title: "Custo Humano Alto", description: "Sua equipe gasta 30% do tempo atualizando planilhas em vez de vender ou criar." }
+        { title: "Dados fragmentados", description: "CRM diz uma coisa, ERP diz outra, no final você vai para a planilha e mesmo assim não tem certeza do número real." },
+        { title: "Custo humano alto", description: "Sua equipe gasta 30% do tempo atualizando planilhas em vez de vender." },
+        { title: "Erros operacionais", description: "Copy-paste manual gera erros de digitação, notas fiscais erradas e churn." }
       ]
     },
     order: {
       title: "Nossa proposta",
       points: [
-        { title: "Sincronia Bidirecional", description: "Faturou no ERP? Atualiza o CRM. Lead converteu? Notifica o Slack. Tudo automático." },
-        { title: "Decisões em Tempo Real", description: "Dashboards que mostram a saúde do negócio agora, não o relatório do mês passado." }
+        { title: "Sincronia bidirecional", description: "Faturou no ERP? Atualiza o CRM. Lead converteu? Notifica o Slack. Tudo automático." },
+        { title: "Decisões em tempo real", description: "Dashboards que mostram a saúde do negócio agora, não o relatório do mês passado." }
       ]
     },
     dataSources: [
@@ -128,9 +129,9 @@ export const SITE_CONTENT = {
         icon: Users
       },
       {
-        title: "Modelo \"skin in the game\"",
+        title: "Modelo baseado em valor",
         description: "Nosso modelo é baseado em resultados, não em horas ou licenças.",
-        badge: "COBRAMOS 10% DO ROI GERADO",
+        badge: "",
         icon: ShieldCheck
       },
       {
