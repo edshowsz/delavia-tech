@@ -9,58 +9,69 @@ export default function Methodology() {
           {/* Text Content */}
           <div>
             
-            <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-6">
-              Não vendemos <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400 decoration-line-through">bodyshop</span>.
+            <h2 className="font-space text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Não vendemos <span className="text-gray-600 decoration-line-through decoration-red-500/50">bodyshop</span>.
               <br />
+              Não vendemos <span className="text-gray-600 decoration-line-through decoration-red-500/50">software</span>.
               <br />
-              Não vendemos <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400 decoration-line-through">Software</span>.
-              <br />
-              <br />
-              Vendemos <span className="text-primary">consultoria especializada</span>.
+              Vendemos <span className="text-primary">resultados</span>.
             </h2>
             
-            <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Você não precisa de mais uma ferramenta, você precisa fazer elas se comunicarem.
-                <br/><br/>
-                Você não precisa de mais um time de desenvolvimento, você precisa de um parceiro que entenda seu negócio e saiba como gerar valor com tecnologia.
-                <br/><br/>
-                Você precisa de parceiros estratégicos, não de fornecedores. E é por isso que nosso modelo de negócio é baseado em resultados, não em horas ou licenças.
-                <br/><br/>
-                <strong>Cobramos 10% do ROI gerado</strong>, garantindo alinhamento total de interesses: crescimento mútuo e foco obsessivo em resultados tangíveis.
-            </p>
-
           </div>
 
           {/* Visual Representation */}
           <div className="relative">
-             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-[100px] rounded-full" />
+             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent blur-[80px] rounded-full pointer-events-none" />
              
-             <div className="relative p-8 border border-white/10 bg-black/50 backdrop-blur-sm rounded-2xl">
-                <div className="flex flex-col gap-6">
-                   {/* Card 1: Bodyshop */}
-                   <div className="flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/5 opacity-50 grayscale">
-                      <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-xs font-bold text-gray-400">
-                        100+
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-gray-400 font-bold text-sm mb-1">Bodyshop Tradicional</h4>
-                        <p className="text-[10px] text-gray-600">Alocação de volume</p>
-                      </div>
-                      <span className="text-[10px] uppercase tracking-wider text-red-500 font-bold border border-red-500/30 px-2 py-1 rounded">Volume</span>
-                   </div>
-
-                   {/* Card 2: Delavia */}
-                   <div className="flex items-center gap-4 p-6 rounded-xl border border-primary bg-black shadow-[0_0_30px_rgba(255,107,0,0.15)] scale-105 transform origin-left">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                        <Users />
-                      </div>
-                      <div className="flex-1">
-                         <h4 className="text-white font-bold mb-1">Parceiro Dedicado</h4>
-                         <p className="text-xs text-gray-400">Objetivos alinhados aos seus</p>
-                      </div>
-                      <span className="text-xs uppercase tracking-wider text-primary font-bold border border-primary/30 px-2 py-1 rounded bg-primary/10">Impacto</span>
-                   </div>
+             <div className="grid gap-6 relative z-10">
+                
+                <div className="p-6 rounded-2xl bg-zinc-900 border border-white/5 hover:border-primary/30 transition-colors group">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-zinc-800 rounded-lg text-gray-400 group-hover:text-primary group-hover:bg-primary/10 transition-colors">
+                            <Target size={24} />
+                        </div>
+                        <div>
+                            <h3 className="text-white font-bold text-lg mb-2">Conexão, não coleção</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Você não precisa de mais uma ferramenta, precisa fazer elas se comunicarem.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
+                <div className="p-6 rounded-2xl bg-zinc-900 border border-white/5 hover:border-primary/30 transition-colors group">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-zinc-800 rounded-lg text-gray-400 group-hover:text-primary group-hover:bg-primary/10 transition-colors">
+                            <Users size={24} />
+                        </div>
+                        <div>
+                            <h3 className="text-white font-bold text-lg mb-2">Parceria estratégica</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">
+                                Você não precisa de mais devs, precisa de um parceiro que entenda seu negócio e gere valor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-[#0F0F0F] border border-primary/20 shadow-[0_0_30px_rgba(255,107,0,0.1)] relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-[40px] rounded-full" />
+                    
+                    <div className="flex items-start gap-4 relative z-10">
+                        <div className="p-3 bg-primary/20 rounded-lg text-primary">
+                            <ShieldCheck size={24} />
+                        </div>
+                        <div>
+                            <h3 className="text-white font-bold text-lg mb-2">Modelo "Skin in the game"</h3>
+                             <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                                Nosso modelo é baseado em resultados, não em horas ou licenças.
+                            </p>
+                            <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded text-primary text-xs font-bold tracking-wide">
+                                COBRAMOS 10% DO ROI GERADO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
              </div>
           </div>
 

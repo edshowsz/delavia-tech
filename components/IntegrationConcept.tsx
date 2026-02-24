@@ -68,11 +68,11 @@ export default function IntegrationConcept() {
                     {DATA_SOURCES.map((source, index) => (
                       <div 
                         key={`chaos-${index}`}
-                        className="absolute -translate-x-1/2 -translate-y-1/2 p-2 bg-red-500/5 border border-red-500/10 rounded text-[10px] text-gray-400 flex items-center gap-1.5 z-10 min-w-max"
+                        className="absolute -translate-x-1/2 -translate-y-1/2 p-1.5 md:p-2 bg-red-500/5 border border-red-500/10 rounded text-[8px] md:text-[10px] text-gray-400 flex items-center gap-1 z-10 max-w-[70px] md:max-w-max text-center md:text-left justify-center md:justify-start"
                         style={{ top: source.y, left: source.x }}
                       >
-                          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                          {source.name}
+                          <div className="w-1 h-1 md:w-1.5 md:h-1.5 shrink-0 rounded-full bg-red-500 animate-pulse" />
+                          <span className="leading-tight break-words">{source.name}</span>
                       </div>
                     ))}
 
@@ -138,11 +138,11 @@ export default function IntegrationConcept() {
                     {DATA_SOURCES.map((source, index) => (
                       <div 
                         key={`order-${index}`}
-                        className="absolute -translate-x-1/2 -translate-y-1/2 px-2 py-1 bg-[#1A1A1A] rounded border border-primary/30 text-[10px] text-gray-300 shadow-lg flex items-center gap-1.5 transition-all hover:scale-110 hover:border-primary/60 hover:z-20 min-w-max"
+                        className="absolute -translate-x-1/2 -translate-y-1/2 p-1 md:px-2 md:py-1 bg-[#1A1A1A] rounded border border-primary/30 text-[8px] md:text-[10px] text-gray-300 shadow-lg flex items-center gap-1 md:gap-1.5 transition-all hover:scale-110 hover:border-primary/60 hover:z-20 max-w-[70px] md:max-w-max text-center md:text-left justify-center md:justify-start"
                         style={{ top: source.y, left: source.x }}
                       >
-                          <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]" /> 
-                          {source.name}
+                          <div className="w-1 h-1 md:w-1.5 md:h-1.5 shrink-0 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]" /> 
+                          <span className="leading-tight break-words">{source.name}</span>
                       </div>
                     ))}
 

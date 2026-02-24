@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Delavia Tech | Consultoria de Dados & IA",
+  title: "DELAVIA.TECH | Consultoria de Dados & IA",
   description: "Transformamos dados em inteligência acionável com automação e agentes de IA.",
 };
 

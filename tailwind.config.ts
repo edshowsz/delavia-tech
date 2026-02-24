@@ -12,9 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "#FF6B00", // Laranja futurista
-          hover: "#FF8533",
-          glow: "rgba(255, 107, 0, 0.5)",
+          DEFAULT: "#FF7A00", // Laranja mais equilibrado (menos vermelho em telas OLED)
+          hover: "#FF9100",   // Hover mais vivo
+          glow: "rgba(255, 122, 0, 0.5)",
         },
         card: {
           DEFAULT: "#111111",
