@@ -4,10 +4,10 @@ import { ArrowRight, Database, Bot, Zap } from "lucide-react";
 import { useContent } from "@/lib/ContentContext";
 
 interface HeroProps {
-  onContactClick: () => void;
+  contactUrl: string;
 }
 
-export default function Hero({ onContactClick }: HeroProps) {
+export default function Hero({ contactUrl }: HeroProps) {
   const { hero } = useContent();
   
   return (
@@ -28,13 +28,15 @@ export default function Hero({ onContactClick }: HeroProps) {
         </p>
         
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-          <button 
-            onClick={onContactClick}
+          <a 
+            href={contactUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(255,107,0,0.3)] hover:shadow-[0_0_30px_rgba(255,107,0,0.5)]"
           >
             {hero.cta.primary}
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
           <a href="#solutions" className="px-8 py-4 rounded-lg font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm uppercase tracking-wide">
             {hero.cta.secondary}
           </a>

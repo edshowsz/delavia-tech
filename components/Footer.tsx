@@ -5,10 +5,10 @@ import { ArrowUpRight, Linkedin } from "lucide-react";
 import { useContent } from "@/lib/ContentContext";
 
  interface FooterProps {
-  onContactClick: () => void;
+  contactUrl: string;
 }
 
-export default function Footer({ onContactClick }: FooterProps) {
+export default function Footer({ contactUrl }: FooterProps) {
   const { cta, footer } = useContent();
   
   return (
@@ -22,13 +22,15 @@ export default function Footer({ onContactClick }: FooterProps) {
                <h2 className="text-3xl font-bold text-white mb-4">{cta.title}</h2>
                <p className="text-gray-300 max-w-xl">{cta.description}</p>
              </div>
-             <button 
-              onClick={onContactClick}
+             <a 
+              href={contactUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 md:mt-0 inline-flex whitespace-nowrap items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all"
              >
                {cta.button}
                <ArrowUpRight />
-             </button>
+             </a>
            </div>
         </div>
 
