@@ -4,11 +4,26 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { PT_CONTENT, EN_CONTENT } from "./content-data";
 
 // Type inference from the content object
-type ContentType = typeof PT_CONTENT;
+export type ContentType = typeof PT_CONTENT;
 
 const ContentContext = createContext<ContentType>(PT_CONTENT);
 
 export const useContent = () => useContext(ContentContext);
+
+// Static provider for pages with fixed content (like /ecomm)
+export const StaticContentProvider = ({ 
+  children, 
+  content 
+}: { 
+  children: React.ReactNode;
+  content: ContentType;
+}) => {
+  return (
+    <ContentContext.Provider value={content}>
+      {children}
+    </ContentContext.Provider>
+  );
+};
 
 export const ContentProvider = ({ children }: { children: React.ReactNode }) => {
   const [content, setContent] = useState<ContentType>(PT_CONTENT);

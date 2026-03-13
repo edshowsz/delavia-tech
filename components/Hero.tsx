@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Database, Bot, Zap } from "lucide-react";
+import { ArrowRight, Database, Zap } from "lucide-react";
 import { useContent } from "@/lib/ContentContext";
 
 interface HeroProps {
@@ -46,21 +46,16 @@ export default function Hero({ contactUrl }: HeroProps) {
 
 
         {/* Tech Stats */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-10 text-left">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 pt-10 text-left max-w-2xl mx-auto">
           <div className="p-4">
             <Database className="text-primary mb-4" />
             <h3 className="text-white font-bold mb-1">{hero.features[0].title}</h3>
             <p className="text-sm text-gray-500">{hero.features[0].description}</p>
           </div>
           <div className="p-4">
-            <Bot className="text-primary mb-4" />
+            <Zap className="text-primary mb-4" />
             <h3 className="text-white font-bold mb-1">{hero.features[1].title}</h3>
             <p className="text-sm text-gray-500">{hero.features[1].description}</p>
-          </div>
-          <div className="p-4">
-            <Zap className="text-primary mb-4" />
-            <h3 className="text-white font-bold mb-1">{hero.features[2].title}</h3>
-            <p className="text-sm text-gray-500">{hero.features[2].description}</p>
           </div>
         </div>
       </div>

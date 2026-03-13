@@ -1,4 +1,4 @@
-import { LineChart, Database, Workflow, BrainCircuit, ScanSearch, Handshake, Users, ShieldCheck } from "lucide-react";
+import { LineChart, Database, Workflow, ScanSearch, Handshake, Users, ShieldCheck } from "lucide-react";
 
 export const PT_CONTENT = {
   navbar: {
@@ -14,16 +14,16 @@ export const PT_CONTENT = {
     }
   },
   hero: {
-    visible: false,
-    badge: "Consultoria de Dados & IA",
+    visible: true,
+    badge: "Consultoria de dados e automações",
     title: {
-      part1: "Transforme dados em",
-      highlight: "inteligência estratégica"
+      part1: "Engenharia de dados",
+      highlight: "para escalar seu negócio"
     },
-    description: "Ajudamos empresas a estruturar seus dados e implementar processos de IA que eliminam gargalos e garantem previsibilidade.",
+    description: "Construímos pipelines robustos, data warehouses modernos e dashboards que transformam dados brutos em decisões estratégicas.",
     cta: {
-      primary: "Agendar Diagnóstico",
-      secondary: "Conheça nossa Consultoria"
+      primary: "Falar com Especialista",
+      secondary: "Ver como funciona"
     },
     features: [
       {
@@ -32,19 +32,14 @@ export const PT_CONTENT = {
         icon: "Database"
       },
       {
-        title: "Agentes de IA",
-        description: "Força de trabalho digital 24/7.",
-        icon: "Bot"
-      },
-      {
-        title: "Automação End-to-End",
-        description: "Elimine tarefas repetitivas.",
+        title: "Integração de Sistemas",
+        description: "CRM, ERP e ferramentas sincronizados.",
         icon: "Zap"
       }
     ]
   },
   integrationConcept: {
-    visible: true,
+    visible: false,
     title: {
       part1: "Sua empresa tem",
       highlight: "ferramentas demais",
@@ -87,7 +82,7 @@ export const PT_CONTENT = {
     ]
   },
   painPoints: {
-    visible: true,
+    visible: false,
     title: {
       part1: "Onde sua operação",
       highlight: "trava?"
@@ -112,7 +107,7 @@ export const PT_CONTENT = {
     ]
   },
   methodology: {
-    visible: true,
+    visible: false,
     title: {
       line1: "Não vendemos",
       highlight1: "bodyshop",
@@ -198,18 +193,6 @@ export const PT_CONTENT = {
           "Sincronização bidirecional de sistemas",
           "Alertas em tempo real"
         ]
-      },
-      {
-        id: "ai",
-        title: "Agentes de IA",
-        icon: BrainCircuit,
-        shortDesc: "Inteligência",
-        description: "A inteligência em ação. Agentes autônomos consomem os dados para tomar decisões e agir.",
-        features: [
-          "Atendimento e Vendas via IA",
-          "RAG (Chat com seus dados)",
-          "Assistentes de Produtividade"
-        ]
       }
     ]
   },
@@ -269,19 +252,14 @@ export const EN_CONTENT = {
         icon: "Database"
       },
       {
-        title: "AI Agents",
-        description: "24/7 digital workforce.",
-        icon: "Bot"
-      },
-      {
-        title: "End-to-End Automation",
-        description: "Eliminate repetitive tasks.",
+        title: "System Integration",
+        description: "CRM, ERP and tools synchronized.",
         icon: "Zap"
       }
     ]
   },
   integrationConcept: {
-    visible: true,
+    visible: false,
     title: {
       part1: "Does your company have",
       highlight: "too many tools",
@@ -434,18 +412,6 @@ export const EN_CONTENT = {
           "Complex workflow orchestration",
           "Bidirectional system synchronization",
           "Real-time alerts"
-        ]
-      },
-      {
-        id: "ai",
-        title: "AI Agents",
-        icon: BrainCircuit,
-        shortDesc: "Intelligence",
-        description: "Intelligence in action. Autonomous agents consume data to make decisions and act.",
-        features: [
-          "AI Sales and Support",
-          "RAG (Chat with your data)",
-          "Productivity Assistants"
         ]
       }
     ]
