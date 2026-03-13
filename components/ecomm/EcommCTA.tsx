@@ -39,10 +39,6 @@ export default function EcommCTA({ contactUrl }: EcommCTAProps) {
               Falar no WhatsApp
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
-            
-            <p className="text-gray-500 text-sm mt-4">
-              Resposta em até 2 horas úteis
-            </p>
           </div>
         </div>
 
