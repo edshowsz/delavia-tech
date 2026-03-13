@@ -15,12 +15,12 @@ export const PT_CONTENT = {
   },
   hero: {
     visible: true,
-    badge: "Consultoria de dados e automações",
+    badge: "Consultoria de Dados",
     title: {
-      part1: "Engenharia de dados",
-      highlight: "para escalar seu negócio"
+      part1: "Dados estruturados,",
+      highlight: "decisões inteligentes"
     },
-    description: "Construímos pipelines robustos, data warehouses modernos e dashboards que transformam dados brutos em decisões estratégicas.",
+    description: "Organizamos seus dados, mapeamos processos e entregamos análises que orientam o crescimento do seu negócio.",
     cta: {
       primary: "Falar com Especialista",
       secondary: "Ver como funciona"
@@ -28,13 +28,18 @@ export const PT_CONTENT = {
     features: [
       {
         title: "Engenharia de Dados",
-        description: "Pipelines escaláveis e warehouse estruturado.",
+        description: "Pipelines e data warehouses estruturados.",
         icon: "Database"
       },
       {
-        title: "Integração de Sistemas",
-        description: "CRM, ERP e ferramentas sincronizados.",
-        icon: "Zap"
+        title: "Modelagem de Processos",
+        description: "Fluxos otimizados e documentados.",
+        icon: "Workflow"
+      },
+      {
+        title: "Análise de Dados",
+        description: "Dashboards e relatórios estratégicos.",
+        icon: "BarChart"
       }
     ]
   },
@@ -199,8 +204,8 @@ export const PT_CONTENT = {
   cta: {
     visible: true,
     title: "Pronto para escalar sua operação?",
-    description: "Agende um diagnóstico gratuito e descubra onde estão os gargalos da sua operação.",
-    button: "ESTOU PRONTO"
+    description: "",
+    button: "QUERO CONVERSAR"
   },
   footer: {
     visible: true,
@@ -419,8 +424,8 @@ export const EN_CONTENT = {
   cta: {
     visible: true,
     title: "Ready to scale your operation?",
-    description: "Schedule a free diagnosis and discover where your operation's bottlenecks are.",
-    button: "I'M READY"
+    description: "",
+    button: "LET'S TALK"
   },
   footer: {
     visible: true,

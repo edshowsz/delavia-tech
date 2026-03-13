@@ -1,11 +1,17 @@
 "use client";
 
-import { ArrowRight, Database, Zap } from "lucide-react";
+import { ArrowRight, Database, Workflow, BarChart3 } from "lucide-react";
 import { useContent } from "@/lib/ContentContext";
 
 interface HeroProps {
   contactUrl: string;
 }
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Database,
+  Workflow,
+  BarChart: BarChart3,
+};
 
 export default function Hero({ contactUrl }: HeroProps) {
   const { hero } = useContent();
@@ -42,21 +48,18 @@ export default function Hero({ contactUrl }: HeroProps) {
           </a>
         </div>
 
-
-
-
         {/* Tech Stats */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 pt-10 text-left max-w-2xl mx-auto">
-          <div className="p-4">
-            <Database className="text-primary mb-4" />
-            <h3 className="text-white font-bold mb-1">{hero.features[0].title}</h3>
-            <p className="text-sm text-gray-500">{hero.features[0].description}</p>
-          </div>
-          <div className="p-4">
-            <Zap className="text-primary mb-4" />
-            <h3 className="text-white font-bold mb-1">{hero.features[1].title}</h3>
-            <p className="text-sm text-gray-500">{hero.features[1].description}</p>
-          </div>
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-10 text-left max-w-4xl mx-auto">
+          {hero.features.map((feature, index) => {
+            const Icon = iconMap[feature.icon] || Database;
+            return (
+              <div key={index} className="p-4">
+                <Icon className="text-primary mb-4" />
+                <h3 className="text-white font-bold mb-1">{feature.title}</h3>
+                <p className="text-sm text-gray-500">{feature.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

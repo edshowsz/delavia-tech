@@ -43,7 +43,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full mt-4">
           {/* Card Data Engineering */}
           <Link 
-            href="/lp/engenharia-dados"
+            href="/lp/consultoria-dados"
             className="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -53,10 +53,10 @@ export default function Home() {
             </div>
             
             <h2 className="text-xl font-bold text-white mb-3">
-              Engenharia de Dados
+              Consultoria de Dados
             </h2>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Para empresas que precisam de pipelines robustos, data warehouses e dashboards para decisões estratégicas.
+              Engenharia de dados, modelagem de processos e análise para decisões estratégicas.
             </p>
             
             <div className="flex items-center text-primary font-semibold text-sm group-hover:gap-3 gap-2 transition-all">
