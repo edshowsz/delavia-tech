@@ -2,6 +2,7 @@
 
 import { useContent } from "@/lib/ContentContext";
 import { Handshake } from "lucide-react";
+import TiltCard from "@/components/TiltCard";
 
 export default function Methodology() {
   const { methodology } = useContent();
@@ -35,9 +36,9 @@ export default function Methodology() {
                   const isHighlighted = card.badge !== undefined;
                   
                   return (
+                    <TiltCard key={index} intensity={8} className="group">
                     <div 
-                      key={index}
-                      className={`p-6 rounded-2xl border transition-colors group relative overflow-hidden ${
+                      className={`p-6 rounded-2xl border transition-colors relative overflow-hidden h-full ${
                         isHighlighted 
                           ? "bg-[#0F0F0F] border-primary/20 shadow-[0_0_30px_rgba(255,107,0,0.1)]" 
                           : "bg-zinc-900 border-white/5 hover:border-primary/30"
@@ -66,6 +67,7 @@ export default function Methodology() {
                             </div>
                         </div>
                     </div>
+                    </TiltCard>
                   );
                 })}
 
