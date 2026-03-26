@@ -43,9 +43,7 @@ export default function Hero({ contactUrl }: HeroProps) {
             {hero.cta.primary}
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
-          <a href="#solutions" className="px-8 py-4 rounded-lg font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm uppercase tracking-wide">
-            {hero.cta.secondary}
-          </a>
+
         </div>
 
         {/* Tech Stats */}

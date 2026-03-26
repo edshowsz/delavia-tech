@@ -210,7 +210,7 @@ export const PT_CONTENT = {
   footer: {
     visible: true,
     company: "Delavia Tech",
-    copyright: "© Todos os direitos reservados.",
+    copyright: "© Todos os direitos reservados. CNPJ 65.495.007/0001-77",
     social: {
       linkedin: "https://www.linkedin.com/company/delavia-tech/"
     }
