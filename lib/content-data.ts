@@ -33,7 +33,7 @@ export const PT_CONTENT = {
       },
       {
         title: "Engenharia de Dados",
-        description: "Estruturamos a coleta, transformação e armazenamento dos dados do seu negócio — do pipeline ao warehouse.",
+        description: "Estruturamos a coleta, transformação e armazenamento dos dados do seu negócio.",
         icon: "Database"
       },
       {
