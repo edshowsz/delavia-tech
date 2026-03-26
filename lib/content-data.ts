@@ -28,17 +28,17 @@ export const PT_CONTENT = {
     features: [
       {
         title: "Engenharia de Dados",
-        description: "Pipelines e data warehouses estruturados.",
+        description: "Pipelines ETL, data lakes e warehouses para dados limpos, confiáveis e sempre acessíveis.",
         icon: "Database"
       },
       {
         title: "Modelagem de Processos",
-        description: "Fluxos otimizados e documentados.",
+        description: "Mapeamos, documentamos e otimizamos seus fluxos operacionais antes de qualquer automação.",
         icon: "Workflow"
       },
       {
         title: "Análise de Dados",
-        description: "Dashboards e relatórios estratégicos.",
+        description: "Dashboards em tempo real que transformam dados brutos em decisões estratégicas claras.",
         icon: "BarChart"
       }
     ]
