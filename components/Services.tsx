@@ -47,7 +47,7 @@ export default function Services() {
         <div className="relative mt-8">
           
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[40px] left-0 w-full h-[2px] bg-white/10 z-0">
+          <div className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-[2px] bg-white/10 z-0">
              <motion.div 
                className="h-full bg-gradient-to-r from-primary to-orange-400"
                animate={{ width: `${(activeStep / (services.items.length - 1)) * 100}%` }}
