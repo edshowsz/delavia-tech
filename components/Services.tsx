@@ -21,18 +21,10 @@ export default function Services() {
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block"
+            className="text-primary font-bold uppercase tracking-widest text-2xl md:text-3xl mb-2 block"
           >
             {services.badge}
           </motion.span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="font-space text-4xl md:text-5xl font-bold text-white mb-6"
-          >
-            {services.title}
-          </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
