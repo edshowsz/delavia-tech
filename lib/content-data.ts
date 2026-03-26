@@ -38,7 +38,7 @@ export const PT_CONTENT = {
       },
       {
         title: "Análise de Dados",
-        description: "Traduzimos seus dados em indicadores que mostram onde o negócio performa e onde está sangrando.",
+        description: "Traduzimos seus dados em indicadores claros sobre o que está funcionando e o que precisa de atenção.",
         icon: "BarChart"
       }
     ]
