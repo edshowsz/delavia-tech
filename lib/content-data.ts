@@ -27,18 +27,18 @@ export const PT_CONTENT = {
     },
     features: [
       {
-        title: "Engenharia de Dados",
-        description: "Pipelines ETL, data lakes e warehouses para dados limpos, confiáveis e sempre acessíveis.",
-        icon: "Database"
-      },
-      {
         title: "Modelagem de Processos",
         description: "Mapeamos, documentamos e otimizamos seus fluxos operacionais antes de qualquer automação.",
         icon: "Workflow"
       },
       {
+        title: "Engenharia de Dados",
+        description: "Estruturamos a coleta, transformação e armazenamento dos dados do seu negócio — do pipeline ao warehouse.",
+        icon: "Database"
+      },
+      {
         title: "Análise de Dados",
-        description: "Dashboards em tempo real que transformam dados brutos em decisões estratégicas claras.",
+        description: "Traduzimos seus dados em indicadores que mostram onde o negócio performa e onde está sangrando.",
         icon: "BarChart"
       }
     ]
