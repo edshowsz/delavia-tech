@@ -47,7 +47,10 @@ export default function Services() {
         <div className="relative mt-8">
           
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-[2px] bg-white/10 z-0">
+          <div
+            className="hidden lg:block absolute top-[40px] h-[2px] bg-white/10 z-0"
+            style={{ left: `${(100 / services.items.length / 2).toFixed(2)}%`, right: `${(100 / services.items.length / 2).toFixed(2)}%` }}
+          >
              <motion.div 
                className="h-full bg-gradient-to-r from-primary to-orange-400"
                animate={{ width: `${(activeStep / (services.items.length - 1)) * 100}%` }}
@@ -64,7 +67,7 @@ export default function Services() {
              />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {services.items.map((service, index) => {
               const isActive = index === activeStep;
               const isPast = index < activeStep;
