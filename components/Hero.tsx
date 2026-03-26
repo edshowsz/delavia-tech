@@ -49,14 +49,18 @@ export default function Hero({ contactUrl }: HeroProps) {
         </div>
 
         {/* Tech Stats */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-10 text-left max-w-4xl mx-auto">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-white/10 pt-10 max-w-4xl mx-auto">
           {hero.features.map((feature, index) => {
             const Icon = iconMap[feature.icon] || Database;
             return (
-              <div key={index} className="p-4">
-                <Icon className="text-primary mb-4" />
+              <div key={index} className="group relative bg-zinc-900 border border-white/5 hover:border-primary/30 rounded-xl p-6 text-left transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary/0 via-primary/60 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="absolute top-4 right-4 text-xs font-mono text-white/10 group-hover:text-white/20 transition-colors">0{index + 1}</span>
+                <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Icon className="text-primary w-5 h-5" />
+                </div>
                 <h3 className="text-white font-bold mb-1">{feature.title}</h3>
-                <p className="text-sm text-gray-500">{feature.description}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{feature.description}</p>
               </div>
             );
           })}
