@@ -1,59 +1,27 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowUpRight, Linkedin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useContent } from "@/lib/ContentContext";
 
- interface FooterProps {
-  contactUrl: string;
-}
-
-export default function Footer({ contactUrl }: FooterProps) {
+export default function Footer({ contactUrl }: { contactUrl: string }) {
   const { cta, footer } = useContent();
-  
+
   return (
-    <footer className="border-t border-white/10 bg-[#050505] pt-20 pb-10">
-      <div id="contact" className="max-w-7xl mx-auto px-6 mb-20">
-        <div className="bg-gradient-to-b md:bg-gradient-to-r from-primary/20 to-transparent p-8 md:p-12 rounded-3xl border border-primary/20 relative overflow-hidden text-center md:text-left">
-           <div className="absolute right-0 top-0 w-[200px] md:w-64 h-[200px] md:h-64 bg-primary/20 blur-[60px] md:blur-[100px] rounded-full -z-10" />
-           
-           <div className="md:flex justify-between items-center gap-8">
-             <div>
-               <h2 className="text-3xl font-bold text-white mb-4">{cta.title}</h2>
-               <p className="text-gray-300 max-w-xl">{cta.description}</p>
-             </div>
-             <a 
-              href={contactUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 md:mt-0 inline-flex whitespace-nowrap items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all"
-             >
-               {cta.button}
-               <ArrowUpRight />
-             </a>
-           </div>
+    <footer className="px-6">
+      <div className="site-container">
+        <div id="contact" className="flex flex-col items-start justify-between gap-8 py-20 md:flex-row md:items-center md:py-24">
+          <div>
+            <h2 className="font-space text-3xl font-medium tracking-tight md:text-4xl">{cta.title}</h2>
+            <p className="mt-4 max-w-lg leading-relaxed text-zinc-400">{cta.description}</p>
+          </div>
+          <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="contact-button shrink-0">
+            {cta.button}<ArrowUpRight size={18} aria-hidden="true" />
+          </a>
         </div>
-
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
-        <div className="font-space font-bold text-white uppercase">
-          {footer.company}
-        </div>
-
-        {footer.social?.linkedin && (
-          <Link 
-            href={footer.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <Linkedin size={20} />
-          </Link>
-        )}
-        
-        <div>
-          {footer.copyright}
+        <div className="flex flex-col gap-5 border-t border-white/10 py-8 text-xs leading-relaxed text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
+          <a href="/" className="font-space text-base font-bold uppercase text-white">{footer.company}</a>
+          <p>{footer.copyright}</p>
+          {footer.social?.linkedin && <a href={footer.social.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1 text-sm transition-colors hover:text-white">LinkedIn<ArrowUpRight size={15} aria-hidden="true" /></a>}
         </div>
       </div>
     </footer>

@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.git
+.agents
+.codex
+*.log
+*.tsbuildinfo
+.env
+.env.*

@@ -9,7 +9,7 @@ export const PT_CONTENT = {
     },
     links: {
       solutions: "Soluções",
-      method: "Método",
+      method: "Como trabalhamos",
       contact: "Contato"
     }
   },
@@ -20,25 +20,25 @@ export const PT_CONTENT = {
       part1: "Dados estruturados,",
       highlight: "decisões inteligentes"
     },
-    description: "Organizamos seus dados, mapeamos processos e entregamos análises que orientam o crescimento do seu negócio.",
+    description: "Organizamos processos e dados para você decidir com clareza.",
     cta: {
-      primary: "Falar com Especialista",
+      primary: "Vamos conversar",
       secondary: "Ver como funciona"
     },
     features: [
       {
-        title: "Modelagem de Processos",
-        description: "Mapeamos, documentamos e otimizamos seus fluxos operacionais antes de qualquer automação.",
+        title: "Processos",
+        description: "Mapeamos como sua operação funciona.",
         icon: "Workflow"
       },
       {
-        title: "Engenharia de Dados",
-        description: "Estruturamos a coleta, transformação e armazenamento dos dados do seu negócio.",
+        title: "Dados",
+        description: "Reunimos e organizamos suas informações.",
         icon: "Database"
       },
       {
-        title: "Análise de Dados",
-        description: "Traduzimos seus dados em indicadores claros sobre o que está funcionando e o que precisa de atenção.",
+        title: "Análise",
+        description: "Criamos indicadores para acompanhar o negócio.",
         icon: "BarChart"
       }
     ]
@@ -144,68 +144,49 @@ export const PT_CONTENT = {
   },
   services: {
     visible: true,
-    badge: "Nosso Pipeline de Valor",
-    title: "O Fluxo da Inteligência",
-    description: "Não entregamos soluções isoladas. Construímos um pipeline contínuo onde dados brutos se transformam em ações inteligentes, gerando valor real e mensurável para seu negócio.",
+    badge: "Como trabalhamos",
+    title: "Como trabalhamos",
+    description: "O ponto de partida depende do que sua operação precisa hoje.",
     items: [
       {
         id: "consulting",
-        title: "Consultoria",
+        title: "Diagnóstico",
         icon: LineChart,
-        shortDesc: "Estratégia",
-        description: "O direcionamento. Diagnosticamos o cenário e desenhamos este pipeline de transformação.",
-        features: [
-          "Diagnóstico técnico da operação",
-          "Mapeamento de gargalos",
-          "Definição da arquitetura (To-Be)",
-          "Roadmap de transformação"
-        ]
+        shortDesc: "Entender",
+        description: "Entendemos sua operação, identificamos os problemas e definimos as prioridades.",
+        features: [] as string[]
       },
       {
         id: "architecture",
-        title: "Arquitetura de Processos",
+        title: "Processos",
         icon: ScanSearch,
-        shortDesc: "Organização",
-        description: "Antes de automatizar, organizamos. Desenhamos fluxos otimizados e escaláveis, garantindo que a tecnologia acelere processos eficientes, não o caos.",
-        features: [
-          "Desenho do fluxo atual (As-Is)",
-          "Identificação de gargalos e redundâncias",
-          "Desenho do fluxo ideal (To-Be)"
-        ]
+        shortDesc: "Organizar",
+        description: "Mapeamos os fluxos de trabalho e ajustamos o que gera atraso ou retrabalho.",
+        features: [] as string[]
       },
       {
         id: "data",
-        title: "Engenharia de dados",
+        title: "Dados",
         icon: Database,
-        shortDesc: "Fundação",
-        description: "A base de tudo. Implementamos ferramentas modernas e estruturamos seus dados para que sejam confiáveis e acessíveis.",
-        features: [
-            "Infraestrutura para orquestração de pipelines",
-            "Data Lakes e Warehouses",
-            "Pipelines ETL/ELT robustos",
-            "Ferramentas de BI e dashboards personalizados",
-            "Modelagem de dados"
-        ]
+        shortDesc: "Estruturar",
+        description: "Conectamos as fontes e preparamos uma base confiável para relatórios e análises.",
+        features: [] as string[]
       },
       {
         id: "automation",
-        title: "Automações Inteligentes",
+        title: "Automação",
         icon: Workflow,
-        shortDesc: "Eficiência",
-        description: "Eliminamos o retrabalho manual. Criamos ecossistemas onde suas ferramentas (CRM, ERP, Marketing) conversam em tempo real.",
-        features: [
-          "Orquestração de workflows complexos",
-          "Sincronização bidirecional de sistemas",
-          "Alertas em tempo real"
-        ]
+        shortDesc: "Conectar",
+        description: "Integramos sistemas e automatizamos tarefas que hoje dependem de trabalho manual.",
+        features: [] as string[]
       }
     ]
   },
   cta: {
     visible: true,
-    title: "Pronto para escalar sua operação?",
-    description: "",
-    button: "QUERO CONVERSAR"
+    title: "Por onde começamos?",
+    description: "Conte o que você precisa organizar na sua operação.",
+    button: "Vamos conversar"
   },
   footer: {
     visible: true,

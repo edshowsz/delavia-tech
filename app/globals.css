@@ -29,3 +29,29 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid #ff7a00;
+  outline-offset: 5px;
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .contact-button {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-primary-hover;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
