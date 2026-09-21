@@ -9,12 +9,13 @@ export default function Footer({ contactUrl }: { contactUrl: string }) {
   return (
     <footer className="px-6">
       <div className="site-container">
-        <div id="contact" className="flex flex-col items-start justify-between gap-8 py-20 md:flex-row md:items-center md:py-24">
-          <div>
+        <div id="contact" className="contact-panel mb-14 flex flex-col items-start justify-between gap-8 p-8 md:flex-row md:items-center md:p-12">
+          <div className="relative">
+            <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">SEU PRÓXIMO PASSO</p>
             <h2 className="font-space text-3xl font-medium tracking-tight md:text-4xl">{cta.title}</h2>
             <p className="mt-4 max-w-lg leading-relaxed text-zinc-400">{cta.description}</p>
           </div>
-          <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="contact-button shrink-0">
+          <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="contact-button relative shrink-0">
             {cta.button}<ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
