@@ -1,32 +1,13 @@
 "use client";
 
+import SalesDataModel from "./SalesDataModel";
 import { useContent } from "@/lib/ContentContext";
 import { Check, Database, GitBranch, ScanLine, Workflow } from "lucide-react";
 
 function TechnicalDetail({ index }: { index: number }) {
   if(index === 0) return <div className="technical-detail" aria-hidden="true"><div className="scan-grid"><span className="scan-sweep"/><div/><div/><div/><div/><div/><div/></div><div className="space-y-2 font-mono text-[10px] text-zinc-500"><p className="text-zinc-300">MAPEAMENTO</p><p className="flex items-center gap-2"><Check size={11} className="text-primary"/>Fontes de dados</p><p className="flex items-center gap-2"><Check size={11} className="text-primary"/>Fluxos & dependências</p><p className="flex items-center gap-2"><Check size={11} className="text-primary"/>Prioridades</p></div></div>;
   if(index === 1) return <div className="technical-detail" aria-hidden="true"><div className="flow-mini"><span>Entrada</span><i/><span className="!border-primary/40 !text-orange-200"><GitBranch size={13}/>Processo</span><i/><span>Entrega</span></div></div>;
-  if (index === 2) return (
-    <figure className="technical-detail business-model" aria-label="Exemplo de modelo de vendas: um cliente pode ter vários pedidos. Cada pedido registra cliente, data, status e valor total.">
-      <div className="business-schema">
-        <div className="business-table">
-          <p className="business-table-title"><Database size={12} aria-hidden="true"/>clientes</p>
-          <p><span>cliente_id</span><span className="schema-key">PK</span></p>
-          <p><span>nome</span><span>texto</span></p>
-          <p><span>cidade</span><span>texto</span></p>
-        </div>
-        <div className="business-relation" aria-hidden="true"><span>1</span><i/><span>N</span></div>
-        <div className="business-table">
-          <p className="business-table-title"><Database size={12} aria-hidden="true"/>pedidos</p>
-          <p><span>pedido_id</span><span className="schema-key">PK</span></p>
-          <p><span>cliente_id</span><span className="schema-key">FK</span></p>
-          <p><span>data_pedido</span><span>data</span></p>
-          <p><span>status</span><span>texto</span></p>
-          <p><span>valor_total</span><span>decimal</span></p>
-        </div>
-      </div>
-    </figure>
-  );
+  if (index === 2) return <SalesDataModel />;
   return <div className="technical-detail" aria-hidden="true"><div className="automation-mini"><span><span className="h-1.5 w-1.5 rounded-full bg-primary"/>Evento</span><div className="automation-line"/><span><Workflow size={13}/>Fluxo</span><div className="automation-line"/><span><Check size={13} className="text-primary"/>Ação</span></div></div>;
 }
 
