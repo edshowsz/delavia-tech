@@ -5,7 +5,6 @@ export default function DataArchitecture() {
     <figure className="architecture-panel" aria-label="Fluxo ilustrativo: sistemas e planilhas passam por ingestão e transformação, formando uma base de dados para análises e automações.">
       <div className="flex items-center justify-between gap-4 border-b border-white/[0.07] px-5 py-4 sm:px-7">
         <span className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400 sm:text-xs"><Layers3 size={15} className="text-primary" aria-hidden="true" />Arquitetura de dados</span>
-        <span className="font-mono text-[10px] text-zinc-500">VISÃO CONCEITUAL</span>
       </div>
       <div className="architecture-grid hidden px-5 py-6 md:block">
         <svg viewBox="0 0 1040 320" className="w-full" aria-hidden="true">
@@ -44,7 +43,7 @@ export default function DataArchitecture() {
             {i===0 ? <path d={`M971 ${y+26} v-7 m7 7 v-12 m7 12 v-17`} stroke="#ff9b50" strokeWidth="2"/> : <path d={`M974 ${y+10} l-5 9 h9 l-5 9`} fill="none" stroke="#ff9b50" strokeWidth="1.5"/>}
           </g>)}
           <path d="M38 286 H1012" stroke="#27272c" strokeDasharray="3 6"/>
-          <text x="38" y="309" fill="#787884" fontFamily="monospace" fontSize="10">DA ORIGEM À DECISÃO</text><text x="1012" y="309" textAnchor="end" fill="#9a8e83" fontFamily="monospace" fontSize="10">Uma arquitetura que conecta sua operação.</text>
+          <text x="1012" y="309" textAnchor="end" fill="#9a8e83" fontFamily="monospace" fontSize="10">Uma arquitetura que conecta sua operação.</text>
         </svg>
       </div>
       <div className="architecture-grid px-5 py-7 md:hidden">
