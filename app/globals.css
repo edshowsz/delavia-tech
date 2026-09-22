@@ -146,16 +146,10 @@ html {
 .scan-grid div { width: 20px; height: 20px; border: 1px solid #6f5140; border-radius: 3px; background: #ff7a0008; }
 .scan-sweep { position: absolute; inset: 0; background: linear-gradient(transparent 40%, #ff9c5030 49%, #ffb07570 50%, transparent 52%); animation: scan 7s ease-in-out infinite; }
 @keyframes scan { 0%,100% { transform: translateY(-40%); opacity: 0; } 30%,70% { opacity: 1; } 90% { transform: translateY(40%); opacity: 0; } }
-.flow-mini, .automation-mini { display: flex; align-items: center; width: 100%; justify-content: center; }
-.flow-mini span, .automation-mini>span { display: flex; align-items: center; gap: 6px; border: 1px solid #ffffff20; border-radius: 7px; background: #19191d; padding: 11px 12px; font-family: monospace; font-size: 10px; color: #a1a1aa; }
-.flow-mini i { width: 25px; height: 1px; background: #a1653c; }
-.automation-line { width: 30px; height: 1px; background: linear-gradient(90deg, #875b3b, #ffab6c, #875b3b); }
 .contact-panel { position: relative; overflow: hidden; border: 1px solid #ffffff14; border-radius: 18px; background: radial-gradient(ellipse at 95% 50%, #ff7a000c, transparent 65%), #0d0d0f; }
 @media (max-width: 400px) {
   .engineering-card { padding: 22px; }
   .technical-detail { gap: 15px; }
-  .flow-mini span, .automation-mini>span { padding: 9px 7px; font-size: 9px; }
-  .flow-mini i, .automation-line { width: 15px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .data-flow, .scan-sweep { animation: none; }
@@ -180,4 +174,50 @@ html {
   .sales-network { height: 200px; }
   .sales-node { font-size: 9px; gap: 7px; height: 57px; border-radius: 8px; }
   .sales-center { height: 72px; font-size: 11px; }
+}
+
+.process-detail { height: 180px; mask-image: none; }
+.process-scene { position: relative; width: 100%; max-width: 440px; height: 155px; }
+.workflow-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+.process-node { position: absolute; display: flex; align-items: center; justify-content: center; gap: 8px; width: 27%; height: 42px; border: 1px solid #ffffff1c; border-radius: 8px; background: linear-gradient(135deg, #24242a, #141417); font-size: 11px; color: #c4c4cf; transform: translateY(-50%); }
+.process-node svg { width: 15px; height: 15px; stroke-width: 1.4; flex-shrink: 0; }
+.process-entry { left: 0; top: 50%; }
+.process-approved { right: 0; top: 25%; border-color: #b4845055; color: #e9c6a7; }
+.process-review { right: 0; top: 75%; color: #9d9da8; }
+.process-decision { position: absolute; left: 49%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; }
+.process-decision>div { width: 38px; height: 38px; transform: rotate(45deg); border: 1px solid #b4845066; border-radius: 8px; background: linear-gradient(135deg, #30261e, #1a1715); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px #ff952705; }
+.process-decision svg { width: 17px; height: 17px; transform: rotate(-45deg); color: #e9b78e; stroke-width: 1.4; }
+.process-decision>span { position: absolute; top: 47px; font-size: 10px; color: #b9aaa0; padding: 0 4px; background: #111113; }
+.automation-detail { position: relative; height: 240px; mask-image: none; }
+.automation-toggle { position: absolute; top: 0; right: 0; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #92929e; border-radius: 8px; }
+.automation-toggle:hover { color: #f1c5a0; background: #ffffff05; }
+.automation-scene { display: flex; width: 100%; max-width: 440px; align-items: center; }
+.automation-step { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; width: 27%; flex-shrink: 0; height: 102px; border: 1px solid #ffffff1c; border-radius: 12px; background: linear-gradient(135deg, #24242a, #141417); color: #a8a8b3; font-size: 11px; }
+.automation-symbol { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 9px; border: 1px solid #ffffff0c; background: #ffffff03; }
+.automation-symbol svg { width: 19px; height: 19px; stroke-width: 1.4; }
+.automation-wire { position: relative; flex: 1; height: 1px; background: #655041; overflow: visible; }
+.automation-wire i { position: absolute; top: -1px; width: 8px; height: 3px; border-radius: 3px; background: #ffc08d; box-shadow: 0 0 7px #ff9c5060; opacity: 0; }
+.automation-trigger { animation: automation-trigger 7s ease-in-out infinite; }
+.automation-execute { animation: automation-execute 7s ease-in-out infinite; }
+.automation-complete { animation: automation-complete 7s ease-in-out infinite; }
+.automation-cog { animation: automation-cog 7s ease-in-out infinite; }
+.automation-wire-first i { animation: automation-signal-first 7s linear infinite; }
+.automation-wire-second i { animation: automation-signal-second 7s linear infinite; }
+@keyframes automation-trigger { 0%,20% { border-color: #c08b5c99; color: #ffcfaa; box-shadow: inset 0 0 20px #ff9d4008; } 35%,100% { border-color: #ffffff1c; color: #a8a8b3; box-shadow: none; } }
+@keyframes automation-execute { 0%,23%,65%,100% { border-color: #ffffff1c; color: #a8a8b3; box-shadow: none; } 32%,55% { border-color: #c08b5c99; color: #ffcfaa; box-shadow: inset 0 0 20px #ff9d4008; } }
+@keyframes automation-complete { 0%,60%,100% { border-color: #ffffff1c; color: #a8a8b3; box-shadow: none; } 72%,88% { border-color: #c08b5c99; color: #ffcfaa; box-shadow: inset 0 0 20px #ff9d4008; } }
+@keyframes automation-cog { 0%,28% { transform: rotate(0); } 58%,100% { transform: rotate(180deg); } }
+@keyframes automation-signal-first { 0%,11% { left: 0; opacity: 0; } 12% { left: 0; opacity: 1; } 29% { left: calc(100% - 8px); opacity: 1; } 30%,100% { left: calc(100% - 8px); opacity: 0; } }
+@keyframes automation-signal-second { 0%,53% { left: 0; opacity: 0; } 54% { left: 0; opacity: 1; } 71% { left: calc(100% - 8px); opacity: 1; } 72%,100% { left: calc(100% - 8px); opacity: 0; } }
+.is-paused *, .is-paused *::before, .is-paused *::after { animation-play-state: paused !important; }
+@media (max-width: 400px) {
+  .process-node { flex-direction: column; height: 48px; gap: 5px; font-size: 9px; }
+  .process-decision>div { width: 28px; height: 28px; border-radius: 6px; }
+  .process-decision>span { top: 39px; font-size: 9px; }
+  .automation-step { height: 87px; gap: 10px; font-size: 9px; border-radius: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .automation-scene * { animation: none !important; }
+  .automation-toggle { display: none; }
+  .automation-complete { color: #ffcfaa; border-color: #c08b5c99; }
 }

@@ -1,14 +1,16 @@
 "use client";
 
+import ProcessDiagram from "./ProcessDiagram";
+import AutomationDiagram from "./AutomationDiagram";
 import SalesDataModel from "./SalesDataModel";
 import { useContent } from "@/lib/ContentContext";
 import { Check, Database, GitBranch, ScanLine, Workflow } from "lucide-react";
 
 function TechnicalDetail({ index }: { index: number }) {
   if(index === 0) return <div className="technical-detail" aria-hidden="true"><div className="scan-grid"><span className="scan-sweep"/><div/><div/><div/><div/><div/><div/></div><div className="space-y-2 font-mono text-[10px] text-zinc-500"><p className="text-zinc-300">MAPEAMENTO</p><p className="flex items-center gap-2"><Check size={11} className="text-primary"/>Fontes de dados</p><p className="flex items-center gap-2"><Check size={11} className="text-primary"/>Fluxos & dependências</p><p className="flex items-center gap-2"><Check size={11} className="text-primary"/>Prioridades</p></div></div>;
-  if(index === 1) return <div className="technical-detail" aria-hidden="true"><div className="flow-mini"><span>Entrada</span><i/><span className="!border-primary/40 !text-orange-200"><GitBranch size={13}/>Processo</span><i/><span>Entrega</span></div></div>;
+  if (index === 1) return <ProcessDiagram />;
   if (index === 2) return <SalesDataModel />;
-  return <div className="technical-detail" aria-hidden="true"><div className="automation-mini"><span><span className="h-1.5 w-1.5 rounded-full bg-primary"/>Evento</span><div className="automation-line"/><span><Workflow size={13}/>Fluxo</span><div className="automation-line"/><span><Check size={13} className="text-primary"/>Ação</span></div></div>;
+  return <AutomationDiagram />;
 }
 
 export default function Services() {
