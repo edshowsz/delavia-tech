@@ -25,7 +25,6 @@ function TechnicalDetail({ index }: { index: number }) {
           <p><span>valor_total</span><span>decimal</span></p>
         </div>
       </div>
-      <figcaption>Exemplo: vendas por mês e ticket médio.</figcaption>
     </figure>
   );
   return <div className="technical-detail" aria-hidden="true"><div className="automation-mini"><span><span className="h-1.5 w-1.5 rounded-full bg-primary"/>Evento</span><div className="automation-line"/><span><Workflow size={13}/>Fluxo</span><div className="automation-line"/><span><Check size={13} className="text-primary"/>Ação</span></div></div>;

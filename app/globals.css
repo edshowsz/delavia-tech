@@ -151,7 +151,6 @@ html {
 .flow-mini i { width: 25px; height: 1px; background: #a1653c; }
 .automation-line { width: 30px; height: 1px; background: linear-gradient(90deg, #875b3b, #ffab6c, #875b3b); }
 .contact-panel { position: relative; overflow: hidden; border: 1px solid #ffffff14; border-radius: 18px; background: radial-gradient(ellipse at 95% 50%, #ff7a000c, transparent 65%), #0d0d0f; }
-.contact-panel::before { content: ""; position: absolute; width: 350px; height: 350px; right: -140px; top: -160px; border: 1px solid #ff983326; border-radius: 50%; box-shadow: 0 0 0 40px #ff7a0005, 0 0 0 80px #ff7a0004; pointer-events: none; }
 @media (max-width: 400px) {
   .engineering-card { padding: 22px; }
   .technical-detail { gap: 15px; }
@@ -182,7 +181,6 @@ html {
 .business-table p>span.schema-key { color: #d99e71; }
 .business-relation { display: flex; align-items: center; flex-shrink: 0; gap: 4px; width: 45px; padding: 0 3px; font-family: monospace; font-size: 9px; color: #cf9a73; }
 .business-relation i { flex: 1; height: 1px; background: #a1653c; }
-.business-model figcaption { color: #92929e; font-size: 10px; text-align: center; }
 @media (max-width: 400px) {
   .business-table { padding: 8px; font-size: 9px; }
   .business-table p { gap: 3px; }
@@ -191,5 +189,4 @@ html {
 }
 @media (max-width: 400px) {
   .business-table p>span:last-child:not(.schema-key) { display: none; }
-  .business-model figcaption { max-width: 100%; }
 }

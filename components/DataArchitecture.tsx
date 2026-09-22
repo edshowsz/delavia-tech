@@ -31,11 +31,8 @@ export default function DataArchitecture() {
             <text x="81" y={y+24} fill="#e4e4e9" fontSize="13">{title}</text><text x="81" y={y+41} fill="#8b8b98" fontSize="9">{label}</text>
           </g>)}
           <rect x="299" y="94" width="189" height="132" rx="12" fill="url(#node-surface)" stroke="#414149"/>
-          <path d="M316 119 h13 m-5 -5 5 5 -5 5 M329 135 h-13 m5 -5 -5 5 5 5" fill="none" stroke="#d3d3dc" strokeWidth="1.3"/>
-          <text x="344" y="119" fill="#ededf0" fontSize="12">Ingestão &amp;</text><text x="344" y="135" fill="#ededf0" fontSize="12">transformação</text>
-          <path d="M316 147 H471" stroke="#333339"/>
-          <text x="316" y="168" fill="#94949f" fontFamily="monospace" fontSize="10">Extrair. Tratar. Integrar.</text>
-          <rect x="316" y="185" width="43" height="23" rx="5" fill="#202126" stroke="#38383e"/><text x="328" y="200" fill="#c3c3cc" fontFamily="monospace" fontSize="10">ELT</text>
+          <text x="393.5" y="154" textAnchor="middle" fill="#ededf0" fontSize="14">Ingestão &amp;</text>
+          <text x="393.5" y="175" textAnchor="middle" fill="#ededf0" fontSize="14">transformação</text>
           <rect x="571" y="77" width="200" height="166" rx="19" fill="none" stroke="#ff7a00" strokeOpacity=".1"/>
           <rect x="582" y="88" width="178" height="144" rx="12" fill="url(#core-surface)" stroke="#9b5a2b"/>
           <g fill="none" stroke="#ffac70" strokeWidth="1.4"><ellipse cx="671" cy="120" rx="15" ry="5"/><path d="M656 120 v20 c0 7 30 7 30 0 v-20 M656 130 c0 7 30 7 30 0"/></g>
@@ -53,7 +50,7 @@ export default function DataArchitecture() {
       <div className="architecture-grid px-5 py-7 md:hidden">
         <div className="flex justify-center gap-2 font-mono text-[11px] text-zinc-300">{['CRM / ERP','APIs','Planilhas'].map(x=><span key={x} className="rounded-md border border-white/10 bg-white/[0.04] px-3 py-2">{x}</span>)}</div>
         <ArrowDown className="mx-auto my-4 text-primary/60" size={18} aria-hidden="true" />
-        <div className="architecture-mobile-node"><Workflow size={19} aria-hidden="true"/><div><p>Ingestão &amp; transformação</p><span>ELT</span></div></div>
+        <div className="architecture-mobile-node"><Workflow size={19} aria-hidden="true"/><div><p>Ingestão &amp; transformação</p></div></div>
         <ArrowDown className="mx-auto my-4 text-primary/60" size={18} aria-hidden="true" />
         <div className="architecture-mobile-node !border-primary/40 !bg-primary/[0.06]"><Database size={21} className="text-primary" aria-hidden="true"/><div><p>Base de dados</p><span>Informações organizadas em um só lugar</span></div></div>
         <ArrowDown className="mx-auto my-4 text-primary/60" size={18} aria-hidden="true" />
