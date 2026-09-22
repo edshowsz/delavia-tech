@@ -189,3 +189,7 @@ html {
   .business-table p>span:last-child { font-size: 8px; }
   .business-relation { width: 28px; gap: 2px; padding: 0 2px; }
 }
+@media (max-width: 400px) {
+  .business-table p>span:last-child:not(.schema-key) { display: none; }
+  .business-model figcaption { max-width: 100%; }
+}
