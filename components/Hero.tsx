@@ -11,7 +11,6 @@ export default function Hero({ contactUrl }: { contactUrl: string }) {
       <div className="hero-orbit" aria-hidden="true" />
       <div className="site-container relative">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-7 inline-flex items-center gap-3 rounded-full border border-primary/20 bg-primary/[0.04] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-orange-200/80 sm:text-xs"><span className="h-1.5 w-1.5 rounded-full bg-primary" />Engenharia de dados & consultoria</p>
           <h1 id="hero-title" className="font-space text-[clamp(2.5rem,6.2vw,5.7rem)] font-medium leading-[1.04] tracking-[-0.055em]">
             <span className="block">{hero.title.part1}</span>
             <span className="hero-title-accent block">{hero.title.highlight}<span className="text-primary">.</span></span>
