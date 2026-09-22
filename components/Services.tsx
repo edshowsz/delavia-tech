@@ -15,7 +15,7 @@ export default function Services() {
   const { services } = useContent();
   const icons=[ScanLine,GitBranch,Database,Workflow];
   return (
-    <section id="method" aria-labelledby="method-title" className="relative px-6 py-20 md:py-28">
+    <section id="como-trabalhamos" aria-labelledby="method-title" className="relative px-6 py-20 md:py-28">
       <div className="site-container">
         <div className="mb-10 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between md:gap-12">
           <div><p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">DA ESTRATÉGIA À IMPLEMENTAÇÃO</p><h2 id="method-title" className="font-space text-4xl font-medium tracking-[-0.04em] md:text-5xl">{services.title}<span className="text-primary">.</span></h2></div>

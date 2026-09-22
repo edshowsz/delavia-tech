@@ -9,9 +9,9 @@ export default function Navbar({ contactUrl }: { contactUrl: string }) {
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const links = [
-    { href: "#solutions", label: navbar.links.solutions },
-    { href: "#method", label: navbar.links.method },
-    { href: "#contact", label: navbar.links.contact },
+    { href: "#solucoes", label: navbar.links.solutions },
+    { href: "#como-trabalhamos", label: navbar.links.method },
+    { href: "#contato", label: navbar.links.contact },
   ];
 
   return (

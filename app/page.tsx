@@ -12,9 +12,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-primary selection:text-black">
-      <a href="#content" className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:rounded-lg focus:bg-primary focus:px-5 focus:py-3 focus:text-black">Pular para o conteúdo</a>
+      <a href="#conteudo" className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:rounded-lg focus:bg-primary focus:px-5 focus:py-3 focus:text-black">Pular para o conteúdo</a>
       {navbar.visible && <Navbar contactUrl={whatsappUrl} />}
-      <main id="content" tabIndex={-1}>
+      <main id="conteudo" tabIndex={-1}>
         {hero.visible && <Hero contactUrl={whatsappUrl} />}
         {services.visible && <Services />}
       </main>

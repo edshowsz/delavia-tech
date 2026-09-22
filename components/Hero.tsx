@@ -7,7 +7,7 @@ import DataArchitecture from "./DataArchitecture";
 export default function Hero({ contactUrl }: { contactUrl: string }) {
   const { hero } = useContent();
   return (
-    <section id="solutions" aria-labelledby="hero-title" className="hero-engineering relative isolate overflow-hidden px-6 pb-0 pt-36 md:pt-40">
+    <section id="solucoes" aria-labelledby="hero-title" className="hero-engineering relative isolate overflow-hidden px-6 pb-0 pt-36 md:pt-40">
       <div className="hero-orbit" aria-hidden="true" />
       <div className="site-container relative">
         <div className="mx-auto max-w-5xl text-center">
@@ -18,7 +18,7 @@ export default function Hero({ contactUrl }: { contactUrl: string }) {
           <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-zinc-400 md:text-lg">{hero.description}</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
             <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="contact-button">{hero.cta.primary}<ArrowUpRight size={18} aria-hidden="true" /></a>
-            <a href="#method" className="inline-flex min-h-11 items-center gap-2 text-sm text-zinc-300 transition-colors hover:text-white">{hero.cta.secondary}<ArrowDown size={15} aria-hidden="true" /></a>
+            <a href="#como-trabalhamos" className="inline-flex min-h-11 items-center gap-2 text-sm text-zinc-300 transition-colors hover:text-white">{hero.cta.secondary}<ArrowDown size={15} aria-hidden="true" /></a>
           </div>
         </div>
         <div className="relative mt-16 md:mt-20"><DataArchitecture /></div>

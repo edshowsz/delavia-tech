@@ -9,7 +9,7 @@ export default function Footer({ contactUrl }: { contactUrl: string }) {
   return (
     <footer className="px-6">
       <div className="site-container">
-        <div id="contact" className="contact-panel mb-14 flex flex-col items-start justify-between gap-8 p-8 md:flex-row md:items-center md:p-12">
+        <div id="contato" className="contact-panel mb-14 flex flex-col items-start justify-between gap-8 p-8 md:flex-row md:items-center md:p-12">
           <div className="relative">
             <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">SEU PRÓXIMO PASSO</p>
             <h2 className="font-space text-3xl font-medium tracking-tight md:text-4xl">{cta.title}</h2>
