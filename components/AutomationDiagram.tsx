@@ -1,7 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import { Database, Pause, Play, Search, ShoppingBag, UserPlus, RefreshCw } from "lucide-react";
+import { Database, Search, ShoppingBag, UserPlus, RefreshCw } from "lucide-react";
 
 const paths = [
   { name: "lookup", d: "M280 105 H360" },
@@ -12,13 +9,8 @@ const paths = [
 ];
 
 export default function AutomationDiagram() {
-  const [paused, setPaused] = useState(false);
-
   return (
-    <figure className={`technical-detail automation-detail${paused ? " is-paused" : ""}`} aria-label="Automação ilustrativa de pedidos pagos: consultar cliente, atualizar o cadastro se já existir ou criar um novo, e registrar a venda. A animação alterna entre os dois caminhos.">
-      <button type="button" className="automation-toggle" onClick={() => setPaused(!paused)} aria-label={paused ? "Reproduzir animação" : "Pausar animação"} title={paused ? "Reproduzir animação" : "Pausar animação"}>
-        {paused ? <Play size={12} aria-hidden="true"/> : <Pause size={12} aria-hidden="true"/>}
-      </button>
+    <figure className="technical-detail automation-detail" aria-label="Automação ilustrativa de pedidos pagos: consultar cliente, atualizar o cadastro se já existir ou criar um novo, e registrar a venda. A animação alterna entre os dois caminhos.">
       <div className="automation-scene" aria-hidden="true">
         <svg viewBox="0 0 1000 500" preserveAspectRatio="none" className="workflow-lines" fill="none">
           {paths.map(({name,d}) => <path key={name} d={d} stroke="#76573f" strokeWidth="1" vectorEffect="non-scaling-stroke"/>)}
@@ -32,7 +24,6 @@ export default function AutomationDiagram() {
         <div className="automation-node automation-record"><span className="automation-node-icon"><Database/></span><span>Registrar<br/>venda</span></div>
         <span className="automation-condition condition-existing">Já existe</span>
         <span className="automation-condition condition-new">Novo cliente</span>
-        <div className="automation-path-guide"><span/><i/><span/><i/><span/></div>
       </div>
     </figure>
   );
